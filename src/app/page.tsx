@@ -10,6 +10,9 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { CasesSection } from "@/components/sections/CasesSection";
 import { DecorativeEmoji } from "@/components/ui/DecorativeEmoji";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 
 export default function Home() {
   return (
@@ -35,8 +38,11 @@ export default function Home() {
         <ServicesSection />
         <ProcessSection />
         <CasesSection />
+        <AboutSection />
+        <ContactSection />
+        <FinalCtaSection />
       </main>
-      <div id="contacto"><Footer /></div>
+      <Footer />
     </>
   );
 }
