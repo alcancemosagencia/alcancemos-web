@@ -5,6 +5,9 @@ import { Header } from "@/components/layout/Header";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { HeroVisual } from "@/components/ui/HeroVisual";
+import { ProblemsSection } from "@/components/sections/ProblemsSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
 
 export default function Home() {
   return (
@@ -26,6 +29,9 @@ export default function Home() {
             <Reveal delay={0.12} className="relative"><HeroVisual /></Reveal>
           </Container>
         </section>
+        <ProblemsSection />
+        <ServicesSection />
+        <ProcessSection />
       </main>
       <div id="contacto"><Footer /></div>
     </>
