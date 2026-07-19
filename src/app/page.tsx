@@ -8,6 +8,7 @@ import { HeroVisual } from "@/components/ui/HeroVisual";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { CasesSection } from "@/components/sections/CasesSection";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <ProblemsSection />
         <ServicesSection />
         <ProcessSection />
+        <CasesSection />
       </main>
       <div id="contacto"><Footer /></div>
     </>
