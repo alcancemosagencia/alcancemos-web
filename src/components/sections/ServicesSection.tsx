@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { DecorativeEmoji } from "@/components/ui/DecorativeEmoji";
 import { services } from "@/data/services";
 
 const accentStyles = ["left-7 w-16", "left-1/2 w-20 -translate-x-1/2", "right-7 w-12"] as const;
@@ -11,12 +12,15 @@ export function ServicesSection() {
   return (
     <section id="servicios" className="scroll-mt-28 py-[var(--section-spacing)]">
       <Container>
-        <SectionHeading
-          eyebrow="Lo que hacemos"
-          title="Un sistema completo para atraer, convertir y crecer."
-          highlight="atraer, convertir y crecer"
-          description="No ejecutamos piezas aisladas. Diseñamos una estrategia conectada entre publicidad, páginas y medición para transformar inversión en oportunidades reales de venta."
-        />
+        <div className="relative max-w-4xl">
+          <SectionHeading
+            eyebrow="Lo que hacemos"
+            title="Un sistema completo para atraer, convertir y crecer."
+            highlight="atraer, convertir y crecer"
+            description="No ejecutamos piezas aisladas. Diseñamos una estrategia conectada entre publicidad, páginas y medición para transformar inversión en oportunidades reales de venta."
+          />
+          <DecorativeEmoji src="/decorations/target-3d.webp" size="md" rotate={-4} className="absolute right-0 top-8 hidden sm:inline-flex" />
+        </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-16 lg:grid-cols-3">
           {services.map((service, index) => (
             <Reveal key={service.title} delay={index * 0.08} className={index === 2 ? "md:col-span-2 lg:col-span-1" : undefined}>

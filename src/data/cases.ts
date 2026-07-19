@@ -8,6 +8,12 @@ export interface CaseResult {
   highlights?: CaseMetric[];
 }
 
+export interface CaseNarrative {
+  challenge: string;
+  strategy: string;
+  result: string;
+}
+
 export interface CaseStudy {
   id: string;
   company: string;
@@ -26,9 +32,11 @@ export interface CaseStudy {
   period?: string;
   placeholder: boolean;
   authorized: boolean;
+  featured?: boolean;
+  shortResult: string;
+  theme?: "dark" | "light";
+  narrative?: CaseNarrative;
 }
-
-export const SHOW_PLACEHOLDER_CASE_BADGES = process.env.NODE_ENV === "development";
 
 export const caseStudies: readonly CaseStudy[] = [
   {
@@ -39,6 +47,14 @@ export const caseStudies: readonly CaseStudy[] = [
     logoWidth: 1536,
     logoHeight: 1024,
     service: "Meta Ads Avanzado",
+    featured: true,
+    theme: "dark",
+    shortResult: "De ventas locales a una estrategia comercial fuera de Talca.",
+    narrative: {
+      challenge: "Casa & Telas dependía principalmente de sus tiendas físicas y necesitaba llegar a compradores mayoristas y empresas fuera de Talca.",
+      strategy: "Diseñamos un sistema de captación B2B con segmentación estratégica, calificación de prospectos y un embudo enfocado en oportunidades de mayor valor.",
+      result: "La campaña transformó una inversión publicitaria de $400.000 CLP en $10.540.000 CLP en ventas durante el periodo analizado.",
+    },
     problem: "Vendían principalmente en tiendas físicas y necesitaban llegar a empresas y compradores mayoristas fuera de Talca.",
     solution: ["Calificación de Leads con IA", "Segmentación B2B", "Embudos de Conversión", "Optimización continua"],
     result: {
@@ -52,7 +68,7 @@ export const caseStudies: readonly CaseStudy[] = [
     testimonial: "Desde el primer día nos hicieron sentir como su prioridad. Llegaron en un momento muy difícil para nuestra empresa y hoy seguimos trabajando juntos porque los resultados hablan por sí solos.",
     person: "Soledad",
     role: "Área Comercial",
-    period: "02/05/2025 — 30/07/2025",
+    period: "Mayo — julio de 2025",
     placeholder: false,
     authorized: true,
   },
@@ -64,6 +80,7 @@ export const caseStudies: readonly CaseStudy[] = [
     logoWidth: 2172,
     logoHeight: 724,
     service: "Meta Ads + Landing Page",
+    shortResult: "Más oportunidades calificadas con una captación comercial ordenada.",
     problem: "Las campañas generaban muchas consultas, pero pocas terminaban en venta.",
     solution: ["Rediseño del embudo", "Landing optimizada", "Remarketing", "Optimización semanal"],
     result: { summary: "Incremento sostenido de oportunidades calificadas y reducción del costo por adquisición." },
@@ -86,6 +103,7 @@ export const caseStudies: readonly CaseStudy[] = [
     logoWidth: 2172,
     logoHeight: 724,
     service: "Google Ads",
+    shortResult: "Un flujo más constante de prospectos para estabilizar la captación.",
     problem: "Dependían únicamente de recomendaciones y no tenían un flujo constante de nuevos clientes.",
     solution: ["Google Ads", "Landing", "Seguimiento de conversiones", "Optimización"],
     result: { summary: "Mayor estabilidad comercial y generación constante de prospectos." },

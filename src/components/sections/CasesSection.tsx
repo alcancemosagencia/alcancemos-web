@@ -1,111 +1,109 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { DecorativeEmoji } from "@/components/ui/DecorativeEmoji";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { caseStudies, SHOW_PLACEHOLDER_CASE_BADGES } from "@/data/cases";
+import { caseStudies, type CaseStudy } from "@/data/cases";
+
+const SHOW_PLACEHOLDERS = process.env.NODE_ENV === "development";
+
+function FeaturedCase({ caseStudy }: { caseStudy: CaseStudy }) {
+  const metrics = [
+    caseStudy.metrics[0],
+    ...(caseStudy.result.highlights?.slice().reverse() ?? []),
+  ];
+  const narrative = caseStudy.narrative;
+
+  return (
+    <Reveal>
+      <article className="relative overflow-hidden rounded-[20px] bg-heading text-white shadow-[0_35px_100px_rgba(4,1,18,0.15)] sm:rounded-[24px]">
+        <div aria-hidden className="absolute -right-24 -top-28 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <div className="relative grid lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="p-6 sm:p-10 lg:p-14 xl:p-16">
+            <div className="flex flex-col gap-7 border-b border-white/12 pb-9 sm:flex-row sm:items-center sm:justify-between">
+              <div className="relative h-20 w-40 overflow-hidden bg-white sm:h-24 sm:w-48">
+                <Image src={caseStudy.logo} alt={`Logo de ${caseStudy.company}`} fill sizes="192px" className="object-contain" />
+              </div>
+              <div className="sm:text-right">
+                <p className="text-xs font-semibold tracking-[0.14em] text-white/65">{caseStudy.industry} · {caseStudy.service}</p>
+                <p className="mt-2 text-sm text-white/45">{caseStudy.period}</p>
+              </div>
+            </div>
+
+            <h3 className="mt-10 max-w-2xl text-balance text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-[2.75rem]">{caseStudy.shortResult}</h3>
+
+            {narrative ? <div className="mt-10 space-y-8">
+              <div><p className="text-xs font-semibold tracking-[0.18em] text-accent">DESAFÍO</p><p className="mt-3 max-w-2xl leading-7 text-white/68">{narrative.challenge}</p></div>
+              <div><p className="text-xs font-semibold tracking-[0.18em] text-accent">ESTRATEGIA</p><p className="mt-3 max-w-2xl leading-7 text-white/68">{narrative.strategy}</p></div>
+              <div><p className="text-xs font-semibold tracking-[0.18em] text-accent">RESULTADO</p><p className="mt-3 max-w-2xl leading-7 text-white/82">{narrative.result}</p></div>
+            </div> : null}
+          </div>
+
+          <div className="flex flex-col border-t border-white/12 bg-white/[0.035] p-6 sm:p-10 lg:border-l lg:border-t-0 lg:p-12 xl:p-14">
+            <dl className="grid grid-cols-2 gap-x-5 sm:grid-cols-3 lg:grid-cols-1">
+              {metrics.map((metric, index) => metric ? (
+                <div key={metric.label} className={`py-6 sm:py-7 lg:py-8 ${index > 0 ? "border-t border-white/12 sm:border-l sm:border-t-0 sm:pl-5 lg:border-l-0 lg:border-t lg:pl-0" : "col-span-2 sm:col-span-1"}`}>
+                  <dd className={`font-display text-[clamp(2.15rem,5vw,4.4rem)] font-medium italic leading-none tracking-[-0.055em] ${index === 0 ? "text-accent" : "text-white"}`}>{metric.value.replace(" CLP", "")}</dd>
+                  <dt className="mt-3 text-xs font-medium tracking-[0.12em] text-white/52">{metric.label}</dt>
+                </div>
+              ) : null)}
+            </dl>
+
+            <figure className="relative mt-8 border-l-2 border-accent pl-6 sm:pl-8 lg:mt-12">
+              <span aria-hidden className="absolute -left-1 top-0 -translate-x-full pr-4 font-display text-6xl italic leading-none text-accent/40">“</span>
+              <blockquote className="text-pretty font-display text-xl italic leading-8 text-white/86 sm:text-2xl sm:leading-9">“{caseStudy.testimonial}”</blockquote>
+              <figcaption className="mt-6 text-sm"><span className="font-semibold text-white">{caseStudy.person}</span><span className="block pt-1 text-white/48">{caseStudy.role} · {caseStudy.company}</span></figcaption>
+            </figure>
+
+            <Link href="#contacto" className="mt-10 inline-flex min-h-12 items-center gap-2 self-start rounded-full bg-white px-6 py-3 text-sm font-semibold text-heading transition hover:bg-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+              Quiero resultados como estos <ArrowUpRight size={17} aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </article>
+    </Reveal>
+  );
+}
+
+function SecondaryCase({ caseStudy }: { caseStudy: CaseStudy }) {
+  return (
+    <Reveal className="h-full">
+      <article className="relative flex h-full flex-col rounded-[20px] bg-white p-6 shadow-[0_22px_70px_rgba(4,1,18,0.06)] sm:p-8">
+        <span className="absolute right-5 top-5 rounded-full bg-accent/[0.08] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-accent">Caso demostrativo</span>
+        <div className="relative h-16 w-36"><Image src={caseStudy.logo} alt={`Logo de ${caseStudy.company}`} fill sizes="144px" className="object-contain object-left" /></div>
+        <p className="mt-7 text-xs font-semibold tracking-[0.16em] text-accent">{caseStudy.industry}</p>
+        <h3 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-heading">{caseStudy.company}</h3>
+        <p className="mt-4 leading-7 text-muted">{caseStudy.shortResult}</p>
+        <dl className="mt-8 grid grid-cols-3 border-y border-border py-5">
+          {caseStudy.metrics.map((metric, index) => <div key={metric.label} className={index > 0 ? "border-l border-border pl-4" : "pr-4"}><dd className="text-xl font-semibold tracking-[-0.03em] text-heading sm:text-2xl">{metric.value}</dd><dt className="mt-1 text-[0.68rem] text-muted">{metric.label}</dt></div>)}
+        </dl>
+        <figure className="mt-7"><blockquote className="text-sm italic leading-6 text-heading/70">“{caseStudy.testimonial}”</blockquote><figcaption className="mt-3 text-xs font-semibold text-heading">{caseStudy.person} · {caseStudy.role}</figcaption></figure>
+      </article>
+    </Reveal>
+  );
+}
 
 export function CasesSection() {
+  const featured = caseStudies.find((caseStudy) => caseStudy.featured && !caseStudy.placeholder);
+  const secondary = caseStudies.filter((caseStudy) => !caseStudy.featured && (!caseStudy.placeholder || SHOW_PLACEHOLDERS));
+
   return (
     <section id="casos" className="scroll-mt-28 py-[var(--section-spacing)]">
       <Container>
-        <SectionHeading
-          eyebrow="Casos de éxito"
-          title="Resultados que hablan por sí solos."
-          highlight="hablan por sí solos"
-          description="Cada negocio tiene objetivos distintos, pero todos comparten algo en común: una estrategia basada en datos, optimización continua y foco en resultados."
-        />
+        <Reveal>
+          <div className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent sm:text-sm">Casos de éxito</p>
+            <div className="mt-4 flex items-start gap-3 sm:items-center sm:gap-5">
+              <h2 className="text-balance text-[clamp(2.35rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.05em] text-heading">Resultados reales que <em className="font-display font-medium italic">impulsan negocios</em>.</h2>
+              <DecorativeEmoji src="/decorations/trophy-3d.webp" size="md" rotate={4} />
+            </div>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">Estrategia, publicidad y optimización trabajando juntas para convertir inversión en crecimiento medible.</p>
+          </div>
+        </Reveal>
 
-        <div className="mt-12 grid auto-rows-fr gap-5 lg:mt-16 lg:grid-cols-2">
-          {caseStudies.map((caseStudy, index) => (
-            <Reveal key={caseStudy.id} delay={index * 0.08} className={index === 0 ? "h-full lg:col-span-2" : "h-full"}>
-              <article className="flex h-full flex-col overflow-hidden rounded-brand border border-border bg-card shadow-[0_22px_76px_rgba(4,1,18,0.055)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_88px_rgba(4,1,18,0.09)]">
-                <div className="relative flex h-44 items-center justify-center overflow-hidden border-b border-border bg-[#fbfbfb] p-6 sm:h-52 sm:p-8">
-                  <Image
-                    src={caseStudy.logo}
-                    alt={`Logo de ${caseStudy.company}`}
-                    width={caseStudy.logoWidth}
-                    height={caseStudy.logoHeight}
-                    className="max-h-full w-auto max-w-full object-contain"
-                    sizes="(min-width: 1024px) 520px, (min-width: 640px) 640px, calc(100vw - 72px)"
-                  />
-                  {caseStudy.placeholder && SHOW_PLACEHOLDER_CASE_BADGES ? (
-                    <span className="absolute right-4 top-4 rounded-full border border-accent/20 bg-white/90 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-accent backdrop-blur">Caso demostrativo</span>
-                  ) : null}
-                </div>
-
-                <div className="flex flex-1 flex-col p-6 sm:p-8">
-                  <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em]">
-                    <span className="rounded-full bg-accent/[0.07] px-3 py-1.5 text-accent">{caseStudy.industry}</span>
-                    <span className="rounded-full border border-border px-3 py-1.5 text-heading/65">{caseStudy.service}</span>
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap items-end justify-between gap-3">
-                    <h3 className="text-3xl font-semibold tracking-[-0.04em] text-heading sm:text-4xl">{caseStudy.company}</h3>
-                    {caseStudy.period ? <p className="text-xs font-medium text-muted">{caseStudy.period}</p> : null}
-                  </div>
-
-                  <div className="mt-7 grid gap-6 border-t border-border pt-7 sm:grid-cols-2">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Problema inicial</p>
-                      <p className="mt-3 text-sm leading-6 text-muted">{caseStudy.problem}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Qué hicimos</p>
-                      <ul className="mt-3 space-y-2">
-                        {caseStudy.solution.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-sm leading-6 text-heading/75">
-                            <Check className="mt-1 shrink-0 text-accent" size={14} strokeWidth={2} aria-hidden />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="mt-7 rounded-[20px] border border-accent/10 bg-accent/[0.035] p-5 sm:p-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Resultado</p>
-                    <p className="mt-3 text-sm leading-6 text-heading/75">{caseStudy.result.summary}</p>
-                    {caseStudy.result.highlights ? (
-                      <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                        {caseStudy.result.highlights.map((highlight) => (
-                          <div key={highlight.label} className="rounded-2xl bg-white p-4">
-                            <p className="text-xs leading-5 text-muted">{highlight.label}</p>
-                            <p className="mt-1 text-lg font-semibold tracking-[-0.02em] text-heading">{highlight.value}</p>
-                          </div>
-                        ))}
-                      </div>
-                    ) : null}
-                  </div>
-
-                  <dl className={`mt-5 grid gap-3 ${caseStudy.metrics.length === 1 ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-3"}`}>
-                    {caseStudy.metrics.map((metric) => (
-                      <div key={metric.label} className="rounded-2xl border border-border bg-background p-4">
-                        <dt className="text-xs leading-5 text-muted">{metric.label}</dt>
-                        <dd className="mt-1 font-display text-2xl font-medium italic text-heading sm:text-3xl">{metric.value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-
-                  <figure className="mt-7 border-l-2 border-accent pl-5">
-                    <blockquote className="text-pretty text-base italic leading-7 text-heading/75">“{caseStudy.testimonial}”</blockquote>
-                    <figcaption className="mt-4 text-sm">
-                      <span className="font-semibold text-heading">{caseStudy.person}</span>
-                      <span className="text-muted"> · {caseStudy.role}</span>
-                    </figcaption>
-                  </figure>
-
-                  <div className="mt-auto pt-8">
-                    <Link href="#contacto" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-heading px-5 py-2.5 text-sm font-semibold text-heading transition hover:border-accent hover:bg-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-                      Ver caso <ArrowUpRight size={17} aria-hidden />
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+        <div className="mt-12 lg:mt-16">{featured ? <FeaturedCase caseStudy={featured} /> : null}</div>
+        {secondary.length > 0 ? <div className="mt-6 grid gap-6 md:grid-cols-2">{secondary.map((caseStudy) => <SecondaryCase key={caseStudy.id} caseStudy={caseStudy} />)}</div> : null}
       </Container>
     </section>
   );
