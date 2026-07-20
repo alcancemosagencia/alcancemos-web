@@ -1,6 +1,6 @@
 # Alcancemos Web
 
-Base técnica, visual y estructural del sitio corporativo de Alcancemos, agencia de performance marketing. Esta primera versión no incluye la landing final, casos de éxito, métricas, formularios, CMS, analytics ni integraciones de terceros.
+Sitio corporativo de Alcancemos, agencia de performance marketing, construido con Next.js y preparado para producción en Vercel.
 
 ## Stack
 
@@ -63,4 +63,25 @@ Playfair Display se carga mediante `next/font/google` únicamente para palabras 
 
 ## Despliegue en Vercel
 
-Importa el repositorio en Vercel, conserva la configuración por defecto de Next.js y ejecuta el build con `npm run build`. No configurar todavía el dominio `alcancemos.com`.
+Importa el repositorio en Vercel, conserva la configuración por defecto de Next.js y ejecuta el build con `npm run build`.
+
+## Formulario de contacto con Resend
+
+El formulario envía las solicitudes a `contacto@alcancemos.com` mediante la API de Resend desde `src/app/api/contact/route.ts`.
+
+1. Crea una cuenta en [Resend](https://resend.com/).
+2. Agrega y verifica el dominio `alcancemos.com` en Resend, incluyendo los registros DNS solicitados.
+3. Crea una API key con permiso para enviar correos.
+4. Copia `.env.example` como `.env.local` y agrega la clave:
+
+```bash
+RESEND_API_KEY=re_xxxxxxxxx
+```
+
+Nunca confirmes `.env.local` ni una API key real en Git.
+
+### Configuración en Vercel
+
+En el proyecto de Vercel abre **Settings → Environment Variables**, crea `RESEND_API_KEY` y habilítala para Production, Preview y Development según corresponda. Después realiza un nuevo despliegue para que la función `/api/contact` reciba la variable.
+
+El remitente configurado es `Alcancemos Web <contacto@alcancemos.com>`, por lo que el dominio debe estar verificado en Resend antes de realizar el primer envío de producción.
