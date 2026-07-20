@@ -6,6 +6,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], style: ["italic"], varia
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alcancemos.com"),
+  alternates: { canonical: "/" },
   title: "Alcancemos | Agencia de Performance Marketing",
   description: "Ayudamos a empresas a crecer con Meta Ads, Google Ads y páginas de alta conversión.",
   openGraph: { title: "Alcancemos | Agencia de Performance Marketing", description: "Ayudamos a empresas a crecer con Meta Ads, Google Ads y páginas de alta conversión.", url: "https://alcancemos.com", siteName: "Alcancemos", locale: "es_ES", type: "website" },

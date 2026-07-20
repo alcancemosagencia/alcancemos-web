@@ -6,17 +6,18 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function FinalCtaSection() {
   return (
-    <section aria-labelledby="final-cta-title" className="py-8 sm:py-12">
+    <section aria-labelledby="final-cta-title" className="bg-heading pt-20 text-white sm:pt-32 lg:pt-40">
       <Container>
         <Reveal>
-          <div className="relative isolate overflow-hidden rounded-[24px] bg-heading px-6 py-14 text-white shadow-[0_30px_100px_rgba(4,1,18,0.16)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+          <div className="relative isolate overflow-hidden border-b border-white/[0.08] px-0 pb-24 pt-8 sm:pb-32 lg:pb-40">
             <div aria-hidden className="absolute -right-16 -top-28 -z-10 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
-            <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
-              <div className="max-w-4xl">
-                <div className="flex items-start gap-3 sm:items-center sm:gap-5"><h2 id="final-cta-title" className="text-balance text-[clamp(2.35rem,5vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.05em]">Tu próximo crecimiento no debería <em className="font-display font-medium italic">depender de la suerte</em>.</h2><DecorativeEmoji src="/decorations/fire-3d.webp" size="lg" rotate={4} /></div>
-                <p className="mt-6 max-w-2xl text-lg leading-8 text-white/62">Construyamos una estrategia clara para atraer mejores clientes, convertir más oportunidades y escalar con decisiones medibles.</p>
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row"><Button href="#contacto" size="large" icon={<ArrowRight size={18} aria-hidden />}>Quiero hacer crecer mi negocio</Button><Button href="#servicios" size="large" variant="secondary" className="border-white/18 bg-white/[0.06] text-white hover:border-white/40 hover:bg-white/10">Ver nuestros servicios</Button></div>
+            <div className="relative">
+              <div className="max-w-5xl">
+                <h2 id="final-cta-title" className="text-balance text-[clamp(2.7rem,6.5vw,6.25rem)] font-semibold leading-[0.95] tracking-[-0.06em]">Tu próximo crecimiento no debería <em className="font-display font-medium italic">depender de la suerte</em>.</h2>
+                <p className="mt-8 max-w-2xl text-lg leading-8 tracking-[-0.01em] text-white/62">Construyamos una estrategia clara para atraer mejores clientes, convertir más oportunidades y escalar con decisiones medibles.</p>
+                <div className="mt-11 flex flex-col gap-3.5 sm:flex-row"><Button href="#contacto" size="large" icon={<ArrowRight size={18} aria-hidden />}>Quiero hacer crecer mi negocio</Button><Button href="#servicios" size="large" variant="secondary" className="border-white/18 bg-white/[0.045] text-white hover:border-white/35 hover:bg-white/[0.075]">Ver nuestros servicios</Button></div>
               </div>
+              <DecorativeEmoji src="/decorations/fire-3d.webp" size="lg" rotate={4} className="absolute bottom-0 right-0 hidden sm:inline-flex lg:bottom-4 lg:right-12 lg:scale-150" />
             </div>
           </div>
         </Reveal>

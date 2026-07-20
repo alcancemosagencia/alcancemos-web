@@ -12,7 +12,7 @@ type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export function Button({ href, variant = "primary", size = "normal", icon, external, children, className, ...props }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full border font-medium transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent",
+    "inline-flex items-center justify-center gap-2 rounded-full border font-medium tracking-[-0.012em] transition duration-300 ease-out active:translate-y-0 active:scale-[0.985] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent",
     size === "large" ? "px-6 py-3 text-base" : "px-5 py-2.5 text-sm",
     variant === "primary" ? "border-accent bg-accent text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#e8065f]" : "border-border bg-white/70 text-heading hover:-translate-y-0.5 hover:border-heading/20",
     className,

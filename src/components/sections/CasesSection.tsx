@@ -17,10 +17,10 @@ function FeaturedCase({ caseStudy }: { caseStudy: CaseStudy }) {
 
   return (
     <Reveal>
-      <article className="relative overflow-hidden rounded-[20px] bg-heading text-white shadow-[0_35px_100px_rgba(4,1,18,0.15)] sm:rounded-[24px]">
+      <article className="relative overflow-hidden rounded-[20px] bg-heading text-white shadow-[0_38px_110px_rgba(4,1,18,0.16)] sm:rounded-[24px]">
         <div aria-hidden className="absolute -right-24 -top-28 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
         <div className="relative grid lg:grid-cols-[1.08fr_0.92fr]">
-          <div className="p-6 sm:p-10 lg:p-14 xl:p-16">
+          <div className="p-6 sm:p-10 lg:px-14 lg:py-16 xl:px-[4.5rem] xl:py-20">
             <div className="flex flex-col gap-7 border-b border-white/12 pb-9 sm:flex-row sm:items-center sm:justify-between">
               <div className="relative h-20 w-40 overflow-hidden bg-white sm:h-24 sm:w-48">
                 <Image src={caseStudy.logo} alt={`Logo de ${caseStudy.company}`} fill sizes="192px" className="object-contain" />
@@ -31,20 +31,20 @@ function FeaturedCase({ caseStudy }: { caseStudy: CaseStudy }) {
               </div>
             </div>
 
-            <h3 className="mt-10 max-w-2xl text-balance text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-[2.75rem]">{caseStudy.shortResult}</h3>
+            <h3 className="mt-12 max-w-2xl text-balance text-3xl font-semibold leading-[1.06] tracking-[-0.048em] sm:text-4xl lg:text-[2.9rem]">{caseStudy.shortResult}</h3>
 
-            {narrative ? <div className="mt-10 space-y-8">
+            {narrative ? <div className="mt-12 space-y-9">
               <div><p className="text-xs font-semibold tracking-[0.18em] text-accent">DESAFÍO</p><p className="mt-3 max-w-2xl leading-7 text-white/68">{narrative.challenge}</p></div>
               <div><p className="text-xs font-semibold tracking-[0.18em] text-accent">ESTRATEGIA</p><p className="mt-3 max-w-2xl leading-7 text-white/68">{narrative.strategy}</p></div>
               <div><p className="text-xs font-semibold tracking-[0.18em] text-accent">RESULTADO</p><p className="mt-3 max-w-2xl leading-7 text-white/82">{narrative.result}</p></div>
             </div> : null}
           </div>
 
-          <div className="flex flex-col border-t border-white/12 bg-white/[0.035] p-6 sm:p-10 lg:border-l lg:border-t-0 lg:p-12 xl:p-14">
+          <div className="flex flex-col border-t border-white/10 bg-white/[0.03] p-6 sm:p-10 lg:border-l lg:border-t-0 lg:px-12 lg:py-16 xl:px-14 xl:py-20">
             <dl className="grid grid-cols-2 gap-x-5 sm:grid-cols-3 lg:grid-cols-1">
               {metrics.map((metric, index) => metric ? (
                 <div key={metric.label} className={`py-6 sm:py-7 lg:py-8 ${index > 0 ? "border-t border-white/12 sm:border-l sm:border-t-0 sm:pl-5 lg:border-l-0 lg:border-t lg:pl-0" : "col-span-2 sm:col-span-1"}`}>
-                  <dd className={`font-display text-[clamp(2.15rem,5vw,4.4rem)] font-medium italic leading-none tracking-[-0.055em] ${index === 0 ? "text-accent" : "text-white"}`}>{metric.value.replace(" CLP", "")}</dd>
+                  <dd className={`font-display font-medium italic leading-none tracking-[-0.06em] ${index === 0 ? "text-[clamp(2.65rem,6vw,5rem)] text-accent" : "text-[clamp(2.25rem,4.7vw,4.2rem)] text-white"}`}>{metric.value.replace(" CLP", "")}</dd>
                   <dt className="mt-3 text-xs font-medium tracking-[0.12em] text-white/52">{metric.label}</dt>
                 </div>
               ) : null)}
@@ -89,7 +89,7 @@ export function CasesSection() {
   const secondary = caseStudies.filter((caseStudy) => !caseStudy.featured && (!caseStudy.placeholder || SHOW_PLACEHOLDERS));
 
   return (
-    <section id="casos" className="scroll-mt-28 py-[var(--section-spacing)]">
+    <section id="casos" className="scroll-mt-28 pb-[clamp(8rem,12vw,11rem)] pt-[clamp(7rem,10vw,9rem)]">
       <Container>
         <Reveal>
           <div className="max-w-4xl">
@@ -102,7 +102,7 @@ export function CasesSection() {
           </div>
         </Reveal>
 
-        <div className="mt-12 lg:mt-16">{featured ? <FeaturedCase caseStudy={featured} /> : null}</div>
+        <div className="mt-14 lg:mt-20">{featured ? <FeaturedCase caseStudy={featured} /> : null}</div>
         {secondary.length > 0 ? <div className="mt-6 grid gap-6 md:grid-cols-2">{secondary.map((caseStudy) => <SecondaryCase key={caseStudy.id} caseStudy={caseStudy} />)}</div> : null}
       </Container>
     </section>
