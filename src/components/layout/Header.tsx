@@ -46,7 +46,7 @@ export function Header() {
   const desktopItems = [
     { label: "Ecosistema", href: "#servicios" },
     { label: "Casos de éxito", href: "#casos" },
-    { label: "Nosotros", href: "#nosotros" },
+    { label: "Filosofía", href: "#nosotros" },
     { label: "Recursos", href: "#proceso" },
   ] as const;
 
@@ -67,7 +67,7 @@ export function Header() {
         </nav>
         {open ? <div id="mobile-navigation" className="border-t border-border/70 px-4 pb-5 pt-4">
           <div className="flex max-h-[calc(100vh-110px)] flex-col gap-1 overflow-y-auto">
-            {navigationItems.map((item) => <Link key={item.href} href={item.href} onClick={closeMenu} className="rounded-2xl px-3 py-2.5 text-base font-medium text-heading transition hover:bg-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{item.href === "#servicios" ? "Ecosistema" : item.label}</Link>)}
+            {navigationItems.map((item) => <Link key={item.href} href={item.href} onClick={closeMenu} className="rounded-2xl px-3 py-2.5 text-base font-medium text-heading transition hover:bg-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{item.href === "#servicios" ? "Ecosistema" : item.href === "#nosotros" ? "Filosofía" : item.label}</Link>)}
             <Button href="#contacto" className="mt-3" onClick={closeMenu}>Hablemos</Button>
           </div>
         </div> : null}

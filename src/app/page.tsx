@@ -5,7 +5,7 @@ import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { CasesSection } from "@/components/sections/CasesSection";
-import { AboutSection } from "@/components/sections/AboutSection";
+import { PhilosophySection } from "@/components/sections/PhilosophySection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 
@@ -19,7 +19,7 @@ export default function Home() {
         <ProblemsSection />
         <ProcessSection />
         <CasesSection />
-        <AboutSection />
+        <PhilosophySection />
         <ContactSection />
         <FinalCtaSection />
       </main>
