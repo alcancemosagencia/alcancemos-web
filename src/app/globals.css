@@ -142,3 +142,75 @@ a { color: inherit; text-decoration: none; }
   .hero-editorial__actions { flex-wrap: wrap; row-gap: 7px; }
   .hero-editorial__primary { width: 100%; }
 }
+
+.ecosystem-section { overflow: hidden; background: #f8f8f8; padding-block: clamp(7.5rem, 10vw, 10.5rem); color: #040112; }
+.ecosystem-section__eyebrow { margin: 0; color: #ff0769; font-size: 13px; font-weight: 700; letter-spacing: .2em; line-height: 1; text-transform: uppercase; }
+.ecosystem-section__title { margin: 25px auto 0; max-width: 1000px; font-size: clamp(3.1rem, 5.3vw, 5rem); font-weight: 600; letter-spacing: -.06em; line-height: .98; }
+.ecosystem-section__title span { display: block; }
+.ecosystem-section__title em { font-family: var(--font-playfair); font-weight: 400; letter-spacing: -.045em; }
+.ecosystem-section__title i { color: #ff0769; font-style: normal; }
+.ecosystem-section__description { margin: 31px auto 0; max-width: 760px; color: #666; font-size: 19px; letter-spacing: -.02em; line-height: 1.55; }
+
+.ecosystem-stage { position: relative; margin-top: 76px; }
+.ecosystem-connectors { position: absolute; inset: 0; z-index: 0; width: 100%; height: 680px; overflow: visible; }
+.ecosystem-connectors path { fill: none; stroke: rgba(255,7,105,.34); stroke-width: 1.25; stroke-linecap: round; stroke-dasharray: 3 8; }
+.ecosystem-connectors circle { fill: #ff0769; opacity: .7; }
+.ecosystem-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); grid-template-rows: repeat(2,330px); gap: 20px; }
+.ecosystem-grid > div { min-width: 0; }
+.ecosystem-piece { display: flex; height: 100%; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid rgba(4,1,18,.065); border-radius: 24px; background: #fff; padding: 28px; box-shadow: 0 26px 80px rgba(4,1,18,.045); transition: transform .35s cubic-bezier(.22,1,.36,1), border-color .35s ease, box-shadow .35s ease; }
+.ecosystem-piece:hover { transform: translateY(-5px); border-color: rgba(255,7,105,.2); box-shadow: 0 34px 90px rgba(4,1,18,.07); }
+.ecosystem-piece__topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.ecosystem-piece__role { color: #ff0769; font-size: 10px; font-weight: 700; letter-spacing: .14em; line-height: 1.2; text-transform: uppercase; }
+.ecosystem-piece__order { color: rgba(4,1,18,.24); font-family: var(--font-playfair); font-size: 17px; font-style: italic; }
+.ecosystem-piece__emoji { display: flex; width: 78px; height: 78px; flex: 0 0 auto; align-items: center; justify-content: center; margin-top: 22px; border: 1px solid rgba(4,1,18,.025); border-radius: 21px; background: #f5f5f5; font-size: 45px; line-height: 1; box-shadow: inset 0 1px 0 rgba(255,255,255,.8); transition: transform .35s cubic-bezier(.22,1,.36,1); }
+.ecosystem-piece:hover .ecosystem-piece__emoji { transform: translateY(-2px) scale(1.025); }
+.ecosystem-piece__copy { margin-top: auto; padding-top: 24px; }
+.ecosystem-piece__copy h3 { margin: 0; font-size: 27px; font-weight: 600; letter-spacing: -.045em; line-height: 1.08; }
+.ecosystem-piece__copy p { margin: 14px 0 0; color: #666; font-size: 14px; letter-spacing: -.01em; line-height: 1.65; }
+.ecosystem-piece[data-size="large"] { padding: 38px; }
+.ecosystem-piece[data-size="large"] .ecosystem-piece__emoji { width: 112px; height: 112px; margin-top: 50px; border-radius: 27px; font-size: 65px; }
+.ecosystem-piece[data-size="large"] .ecosystem-piece__copy { max-width: 460px; padding-top: 48px; }
+.ecosystem-piece[data-size="large"] .ecosystem-piece__copy h3 { font-size: clamp(2.5rem,3.4vw,3.65rem); letter-spacing: -.055em; }
+.ecosystem-piece[data-size="large"] .ecosystem-piece__copy p { margin-top: 20px; font-size: 17px; line-height: 1.7; }
+.ecosystem-piece[data-size="compact"] { padding: 25px 27px; }
+.ecosystem-piece[data-size="compact"] .ecosystem-piece__emoji { width: 66px; height: 66px; margin-top: 18px; border-radius: 18px; font-size: 37px; }
+.ecosystem-piece[data-size="compact"] .ecosystem-piece__copy { padding-top: 18px; }
+.ecosystem-piece[data-size="compact"] .ecosystem-piece__copy h3 { font-size: 25px; }
+
+.ecosystem-result { display: flex; align-items: flex-end; justify-content: space-between; gap: 60px; margin-top: 70px; border-top: 1px solid rgba(4,1,18,.12); border-bottom: 1px solid rgba(4,1,18,.12); padding: 48px 4px 52px; }
+.ecosystem-result > div p { margin: 0; color: #ff0769; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.ecosystem-result > div span { display: block; margin-top: 9px; color: #666; font-size: 15px; }
+.ecosystem-result h3 { max-width: 760px; margin: 0; text-align: right; font-size: clamp(2.8rem,5vw,4.8rem); font-weight: 600; letter-spacing: -.06em; line-height: .94; }
+.ecosystem-result h3 em { font-family: var(--font-playfair); font-weight: 400; letter-spacing: -.045em; }
+.ecosystem-result h3 i { color: #ff0769; font-style: normal; }
+
+@media (max-width: 1023px) {
+  .ecosystem-section__title { max-width: 820px; }
+  .ecosystem-stage { margin-top: 64px; }
+  .ecosystem-connectors { display: none; }
+  .ecosystem-grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: auto; }
+  .ecosystem-piece { min-height: 350px; }
+  .ecosystem-piece[data-size="large"] { min-height: 440px; }
+  .ecosystem-piece[data-size="large"] .ecosystem-piece__emoji { margin-top: 35px; }
+  .ecosystem-result { align-items: flex-start; flex-direction: column; gap: 36px; }
+  .ecosystem-result h3 { max-width: 700px; text-align: left; }
+}
+
+@media (max-width: 767px) {
+  .ecosystem-section { padding-block: 7rem; }
+  .ecosystem-section__eyebrow { font-size: 11px; }
+  .ecosystem-section__title { margin-top: 20px; font-size: clamp(2.65rem,10.6vw,4rem); line-height: 1; }
+  .ecosystem-section__title span { margin-top: 5px; }
+  .ecosystem-section__description { margin-top: 25px; font-size: 17px; line-height: 1.55; }
+  .ecosystem-stage { margin-top: 52px; }
+  .ecosystem-grid { display: flex; flex-direction: column; gap: 30px; }
+  .ecosystem-grid > div { position: relative; }
+  .ecosystem-grid > div:not(:last-child)::after { position: absolute; left: 50%; bottom: -30px; width: 1px; height: 30px; background: linear-gradient(to bottom,rgba(255,7,105,.65),rgba(255,7,105,.12)); content: ""; }
+  .ecosystem-piece, .ecosystem-piece[data-size="large"] { min-height: 0; padding: 28px; }
+  .ecosystem-piece[data-size="large"] .ecosystem-piece__emoji, .ecosystem-piece__emoji { width: 78px; height: 78px; margin-top: 24px; border-radius: 20px; font-size: 45px; }
+  .ecosystem-piece__copy, .ecosystem-piece[data-size="large"] .ecosystem-piece__copy { max-width: none; margin-top: 42px; padding-top: 0; }
+  .ecosystem-piece__copy h3, .ecosystem-piece[data-size="large"] .ecosystem-piece__copy h3, .ecosystem-piece[data-size="compact"] .ecosystem-piece__copy h3 { font-size: 30px; }
+  .ecosystem-piece__copy p, .ecosystem-piece[data-size="large"] .ecosystem-piece__copy p { margin-top: 15px; font-size: 15px; line-height: 1.65; }
+  .ecosystem-result { gap: 31px; margin-top: 52px; padding-block: 36px 40px; }
+  .ecosystem-result h3 { font-size: clamp(2.7rem,11.5vw,3.7rem); }
+}

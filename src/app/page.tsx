@@ -2,7 +2,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { HeroEditorial } from "@/components/sections/HeroEditorial";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
+import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { CasesSection } from "@/components/sections/CasesSection";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -15,7 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroEditorial />
-        <ServicesSection />
+        <EcosystemSection />
         <ProblemsSection />
         <ProcessSection />
         <CasesSection />
