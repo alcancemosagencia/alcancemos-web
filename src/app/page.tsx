@@ -1,12 +1,9 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { HeroEditorial } from "@/components/sections/HeroEditorial";
-import { ProblemsSection } from "@/components/sections/ProblemsSection";
+import { HeroSection } from "@/components/sections/HeroSection";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
-import { ProcessSection } from "@/components/sections/ProcessSection";
 import { CasesSection } from "@/components/sections/CasesSection";
-import { PhilosophySection } from "@/components/sections/PhilosophySection";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 
 export default function Home() {
@@ -14,13 +11,10 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <HeroEditorial />
+        <HeroSection />
         <EcosystemSection />
-        <ProblemsSection />
-        <ProcessSection />
         <CasesSection />
-        <PhilosophySection />
-        <ContactSection />
+        <ProcessSection />
         <FinalCtaSection />
       </main>
       <Footer />

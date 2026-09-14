@@ -1,60 +1,230 @@
+"use client";
+
+import { useState } from "react";
+import { Bot, Database, Target } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { ecosystemPieces } from "@/data/ecosystem";
+
+const capabilities = [
+  {
+    id: "acquisition",
+    number: "01",
+    title: "Adquisición cualificada",
+    subtitle: "Meta Ads & Tráfico de alta intención",
+    description:
+      "Diseñamos y ejecutamos campañas orientadas a captar compradores con presupuesto y necesidad real, filtrando curiosos desde el primer clic.",
+    metrics: [
+      { label: "Segmentación", value: "B2B & High-Ticket" },
+      { label: "Estructura", value: "Embudos de alta conversión" },
+      { label: "Optimización", value: "CPA y volumen predecible" },
+    ],
+    icon: Target,
+  },
+  {
+    id: "ai-agents",
+    number: "02",
+    title: "IA + Conversación",
+    subtitle: "Agentes entrenados con tu conocimiento de ventas",
+    description:
+      "Atiende consultas iniciales, comprende el contexto comercial, perfila al prospecto y resuelve dudas frecuentes.",
+    metrics: [
+      { label: "Disponibilidad", value: "Atención continua" },
+      { label: "Interacción", value: "Conversación contextual" },
+      { label: "Capacidad", value: "Calificación y perfilamiento" },
+    ],
+    icon: Bot,
+  },
+  {
+    id: "crm-closing",
+    number: "03",
+    title: "Seguimiento en CRM",
+    subtitle: "Pipeline sincronizado y trazabilidad",
+    description:
+      "Cada oportunidad perfilada se registra en el CRM, agenda reunión en el calendario de tu equipo y activa secuencias de seguimiento.",
+    metrics: [
+      { label: "Integración", value: "HubSpot / Pipedrive / Sheets" },
+      { label: "Agendamiento", value: "Calendly / Cal.com directo" },
+      { label: "Trazabilidad", value: "Atribución real por venta" },
+    ],
+    icon: Database,
+  },
+];
 
 export function EcosystemSection() {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
-    <section id="servicios" className="ecosystem-section scroll-mt-24">
-      <Container className="max-w-[1344px]">
-        <Reveal className="mx-auto max-w-[1000px] text-center">
-          <p className="ecosystem-section__eyebrow">El ecosistema</p>
-          <h2 className="ecosystem-section__title">
-            Más que marketing.
-            <span>Construimos el <em>sistema</em> que hace crecer tu empresa<i>.</i></span>
-          </h2>
-          <p className="ecosystem-section__description">
-            Estrategia, adquisición, conversión, automatización e inteligencia artificial trabajando como un solo sistema comercial.
-          </p>
-        </Reveal>
+    <section
+      id="sistema"
+      className="relative overflow-hidden bg-[#0F0F10] py-24 sm:py-32 border-t border-white/[0.06]"
+    >
+      {/* Anchor for backward compatibility */}
+      <span id="ecosistema" className="sr-only" />
 
-        <div className="ecosystem-stage">
-          <svg className="ecosystem-connectors" viewBox="0 0 1200 640" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M465 160 C535 160 520 125 600 125" />
-            <path d="M895 150 C970 150 970 190 1040 190" />
-            <path d="M465 470 C540 470 515 510 605 510" />
-            <path d="M845 500 C920 500 915 470 985 470" />
-            <circle cx="500" cy="160" r="4" />
-            <circle cx="932" cy="171" r="4" />
-            <circle cx="520" cy="486" r="4" />
-            <circle cx="905" cy="478" r="4" />
-          </svg>
+      {/* Ambient background glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-1/4 top-1/3 h-[500px] w-[500px] rounded-full bg-white/[0.015] blur-[150px]"
+      />
 
-          <div className="ecosystem-grid">
-            {ecosystemPieces.map((piece, index) => (
-              <Reveal key={piece.id} delay={index * 0.07} className={piece.visualClass}>
-                <article className="ecosystem-piece group" data-size={piece.size}>
-                  <div className="ecosystem-piece__topline">
-                    <span className="ecosystem-piece__role">{piece.role}</span>
-                    <span className="ecosystem-piece__order" aria-hidden="true">0{piece.order}</span>
-                  </div>
-                  <div className="ecosystem-piece__emoji" aria-hidden="true">{piece.emoji}</div>
-                  <div className="ecosystem-piece__copy">
-                    <h3>{piece.title}</h3>
-                    <p>{piece.description}</p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+      <Container className="max-w-[1200px]">
+        {/* Section Header */}
+        <div className="mx-auto max-w-[760px] text-center">
+          <Reveal>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-[#161618] px-3.5 py-1.5 shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <span className="text-[11.5px] font-medium tracking-wide uppercase text-[#E4E4E7]">
+                Cómo funciona el sistema
+              </span>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.06}>
+            <h2 className="mt-5 text-[clamp(2.2rem,4.2vw,3.6rem)] font-medium leading-[1.08] tracking-[-0.035em] text-[#F4F4F6]">
+              De un lead a una venta.{" "}
+              <span className="text-[#F4F4F6]">Todo conectado.</span>
+            </h2>
+          </Reveal>
+
+          <Reveal delay={0.12}>
+            <p className="mt-5 text-[clamp(1rem,1.2vw,1.15rem)] leading-[1.65] text-[#9E9CA8]">
+              Un sistema conecta adquisición, conversación y seguimiento para crear un flujo comercial predecible.
+            </p>
+          </Reveal>
         </div>
 
-        <Reveal delay={0.36} className="ecosystem-result">
-          <div>
-            <p>Todo conectado. Todo medido.</p>
-            <span>Todo orientado a crecer.</span>
+        {/* 3 Capabilities Grid */}
+        <div className="mt-16 sm:mt-20 grid gap-6 lg:grid-cols-3">
+          {capabilities.map((item, index) => {
+            const Icon = item.icon;
+            const isSelected = activeTab === index;
+            return (
+              <div
+                key={item.id}
+                onClick={() => setActiveTab(index)}
+                className={`group relative cursor-pointer rounded-[24px] border p-6 sm:p-8 transition-all duration-300 ${
+                  isSelected
+                    ? "border-white/[0.18] bg-gradient-to-b from-[#1C1C20] to-[#141416] shadow-[0_16px_40px_rgba(0,0,0,0.6)]"
+                    : "border-white/[0.06] bg-[#141416]/60 hover:border-white/[0.12] hover:bg-[#18181B]"
+                }`}
+              >
+                {/* Active Indicator Top Light */}
+                {isSelected && (
+                  <div
+                    aria-hidden="true"
+                    className="absolute -top-px left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                  />
+                )}
+
+                <div className="flex items-center justify-between">
+                  <span className="text-[12px] font-mono font-medium text-[#71717A]">
+                    {item.number}
+                  </span>
+                  <div className={`rounded-xl border p-2.5 ${isSelected ? "border-white/20 bg-white/10 text-white" : "border-white/[0.08] bg-white/[0.03] text-[#A1A1AA]"}`}>
+                    <Icon size={18} />
+                  </div>
+                </div>
+
+                <h3 className="mt-5 text-[20px] sm:text-[22px] font-medium leading-[1.2] text-[#F4F4F6]">
+                  {item.title}
+                </h3>
+                <p className="mt-1 text-[13px] font-medium text-[#A1A1AA]">
+                  {item.subtitle}
+                </p>
+
+                <p className="mt-4 text-[14px] leading-[1.6] text-[#9E9CA8]">
+                  {item.description}
+                </p>
+
+                {/* Metrics list */}
+                <div className="mt-6 space-y-2.5 border-t border-white/[0.06] pt-5">
+                  {item.metrics.map((m) => (
+                    <div
+                      key={m.label}
+                      className="flex items-center justify-between text-[12.5px]"
+                    >
+                      <span className="text-[#71717A]">{m.label}</span>
+                      <span className="font-medium text-[#E4E4E7]">{m.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Live System Pipeline Showcase */}
+        <div className="mt-8 rounded-[24px] border border-white/[0.08] bg-[#141416] p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.06] pb-5">
+            <div>
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#71717A]">
+                Arquitectura de flujo continuo
+              </span>
+              <h4 className="text-[17px] font-medium text-[#F4F4F6]">
+                Circuito de conversión comercial
+              </h4>
+            </div>
+            <div className="flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-[12px] font-medium text-emerald-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Flujo automatizado
+            </div>
           </div>
-          <h3>Crecimiento Comercial <em>Medible</em><i>.</i></h3>
-        </Reveal>
+
+          {/* Pipeline Steps Flow */}
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-2xl border border-white/[0.06] bg-[#1A1A1D]/80 p-5">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#71717A]">
+                <span>PASO 01</span>
+                <span className="text-[#E4E4E7]">META ADS</span>
+              </div>
+              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
+                Captación segmentada
+              </p>
+              <p className="mt-1 text-[12px] text-[#9E9CA8]">
+                Anuncios que derivan directamente al canal de atención.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/[0.08] bg-[#1A1A1D]/80 p-5 relative overflow-hidden">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#71717A]">
+                <span>PASO 02</span>
+                <span className="text-[#FF0769]">AGENTE IA</span>
+              </div>
+              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
+                Calificación y perfilamiento
+              </p>
+              <p className="mt-1 text-[12px] text-[#9E9CA8]">
+                Atención continua y filtro de prospectos con intención real.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/[0.06] bg-[#1A1A1D]/80 p-5">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#71717A]">
+                <span>PASO 03</span>
+                <span className="text-[#E4E4E7]">CRM SYNC</span>
+              </div>
+              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
+                Agendamiento automático
+              </p>
+              <p className="mt-1 text-[12px] text-[#9E9CA8]">
+                Reunión sincronizada en calendario del equipo comercial.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/[0.06] bg-[#1A1A1D]/80 p-5">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#71717A]">
+                <span>PASO 04</span>
+                <span className="text-emerald-400">REVENUE</span>
+              </div>
+              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
+                Venta y atribución
+              </p>
+              <p className="mt-1 text-[12px] text-[#9E9CA8]">
+                Retorno sobre inversión medido por canal y cohorte.
+              </p>
+            </div>
+          </div>
+        </div>
       </Container>
     </section>
   );

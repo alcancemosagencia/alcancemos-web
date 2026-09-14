@@ -1,8 +1,43 @@
-export const problems = [
-  { emoji: "📉", title: "Muchos leads.", description: "Pocas ventas.", visualClass: "lg:col-span-5" },
-  { emoji: "📱", title: "Responden tarde.", description: "Los clientes se enfrían.", visualClass: "lg:col-span-3 lg:translate-y-8" },
-  { emoji: "📋", title: "No existe seguimiento.", description: "", visualClass: "lg:col-span-4" },
-  { emoji: "📊", title: "No saben qué campaña", description: "realmente vende.", visualClass: "lg:col-span-4 lg:ml-12" },
-  { emoji: "🤹", title: "Cada herramienta funciona", description: "por separado.", visualClass: "lg:col-span-5 lg:translate-y-8" },
-  { emoji: "💸", title: "Se invierte más.", description: "Pero no se escala.", visualClass: "lg:col-span-3" },
-] as const;
+﻿export interface FragmentationStep {
+  id: string;
+  tool: string;
+  role: string;
+  state: string;
+  ruptureBadge: string;
+  ruptureDetail: string;
+}
+
+export const fragmentationSteps: FragmentationStep[] = [
+  {
+    id: "ads-to-whatsapp",
+    tool: "Meta Ads",
+    role: "Adquisición",
+    state: "Lead generado",
+    ruptureBadge: "Sin respuesta a tiempo",
+    ruptureDetail: "Demora en el primer contacto",
+  },
+  {
+    id: "whatsapp-to-crm",
+    tool: "WhatsApp",
+    role: "Conversación",
+    state: "Chat sin clasificar",
+    ruptureBadge: "Seguimiento pendiente",
+    ruptureDetail: "Depende de memoria y notas",
+  },
+  {
+    id: "crm-to-sales",
+    tool: "CRM",
+    role: "Pipeline",
+    state: "Contexto incompleto",
+    ruptureBadge: "Datos fragmentados",
+    ruptureDetail: "Historial disperso",
+  },
+  {
+    id: "sales-to-direction",
+    tool: "Dirección",
+    role: "Control comercial",
+    state: "Resultado incierto",
+    ruptureBadge: "Sin atribución",
+    ruptureDetail: "Inversión no correlacionada",
+  },
+];

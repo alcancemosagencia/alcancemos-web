@@ -1,52 +1,39 @@
-export const ecosystemPieces = [
-  {
-    id: "commercial-engineering",
-    emoji: "🧠",
-    title: "Ingeniería Comercial",
-    description: "Analizamos tu modelo de negocio, oferta, mercado y proceso de ventas para diseñar una estrategia de crecimiento adaptada a tu empresa.",
-    role: "Define la dirección.",
-    order: 1,
-    size: "large",
-    visualClass: "md:col-span-2 lg:col-span-5 lg:col-start-1 lg:row-span-2 lg:row-start-1",
+﻿export interface ArchitectureNode {
+  id: string;
+  name: string;
+  tagline: string;
+  iconType: "engineering" | "ads" | "funnels" | "ai" | "followup";
+}
+
+export const architectureNodes: Record<string, ArchitectureNode> = {
+  engineering: {
+    id: "engineering",
+    name: "Ingeniería comercial",
+    tagline: "Diseña la arquitectura y oferta",
+    iconType: "engineering",
   },
-  {
-    id: "performance-marketing",
-    emoji: "📈",
-    title: "Performance Marketing",
-    description: "Creamos y optimizamos campañas en Meta para atraer oportunidades con intención real de compra y escalar con mayor control.",
-    role: "Genera demanda.",
-    order: 2,
-    size: "medium",
-    visualClass: "lg:col-span-3 lg:col-start-6 lg:row-start-1",
+  ads: {
+    id: "ads",
+    name: "Meta Ads",
+    tagline: "Genera demanda calificada",
+    iconType: "ads",
   },
-  {
-    id: "funnels-conversion",
-    emoji: "🧲",
-    title: "Embudos y Conversión",
-    description: "Diseñamos landing pages, recorridos y mensajes que convierten atención en oportunidades comerciales y ventas.",
-    role: "Convierte la atención.",
-    order: 3,
-    size: "medium",
-    visualClass: "lg:col-span-4 lg:col-start-9 lg:row-start-1",
+  funnels: {
+    id: "funnels",
+    name: "Embudos",
+    tagline: "Convierte atención en diálogo",
+    iconType: "funnels",
   },
-  {
-    id: "ai-agents",
-    emoji: "🤖",
-    title: "Agentes IA",
-    description: "Implementamos agentes entrenados para responder, calificar, orientar y atender clientes como parte real del equipo.",
-    role: "Atiende y califica.",
-    order: 4,
-    size: "compact",
-    visualClass: "lg:col-span-3 lg:col-start-6 lg:row-start-2",
+  ai: {
+    id: "ai",
+    name: "Agentes IA",
+    tagline: "Atienden y califican oportunidades",
+    iconType: "ai",
   },
-  {
-    id: "automation-follow-up",
-    emoji: "⚙️",
-    title: "Automatización y Seguimiento",
-    description: "Conectamos CRM, WhatsApp, seguimiento y procesos automáticos para que ninguna oportunidad se pierda.",
-    role: "Da continuidad.",
-    order: 5,
-    size: "compact",
-    visualClass: "lg:col-span-4 lg:col-start-9 lg:row-start-2",
+  followup: {
+    id: "followup",
+    name: "Seguimiento",
+    tagline: "Mantiene el avance en CRM",
+    iconType: "followup",
   },
-] as const;
+};

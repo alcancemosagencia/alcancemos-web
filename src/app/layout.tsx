@@ -1,16 +1,38 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
+import { ClientProviders } from "@/components/providers/ClientProviders";
 
-const playfair = Playfair_Display({ subsets: ["latin"], style: ["italic"], variable: "--font-playfair", display: "swap" });
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alcancemos.com"),
   alternates: { canonical: "/" },
-  title: "Alcancemos | Agencia de Performance Marketing",
-  description: "Ayudamos a empresas a crecer con Meta Ads, Google Ads y páginas de alta conversión.",
-  openGraph: { title: "Alcancemos | Agencia de Performance Marketing", description: "Ayudamos a empresas a crecer con Meta Ads, Google Ads y páginas de alta conversión.", url: "https://alcancemos.com", siteName: "Alcancemos", locale: "es_ES", type: "website" },
-  twitter: { card: "summary_large_image", title: "Alcancemos | Agencia de Performance Marketing", description: "Ayudamos a empresas a crecer con Meta Ads, Google Ads y páginas de alta conversión." },
+  title: "Alcancemos | Sistemas Comerciales, Automatización e IA",
+  description: "Diseñamos e instalamos el sistema comercial que conecta adquisición cualificada, agentes de IA conversacionales y sincronización con CRM para escalar conversiones.",
+  openGraph: {
+    title: "Alcancemos | Sistemas Comerciales, Automatización e IA",
+    description: "Diseñamos e instalamos el sistema comercial que conecta adquisición cualificada, agentes de IA conversacionales y sincronización con CRM para escalar conversiones.",
+    url: "https://alcancemos.com",
+    siteName: "Alcancemos",
+    locale: "es_CL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alcancemos | Sistemas Comerciales, Automatización e IA",
+    description: "Diseñamos e instalamos el sistema comercial que conecta adquisición cualificada, agentes de IA conversacionales y sincronización con CRM para escalar conversiones.",
+  },
   robots: { index: true, follow: true },
   icons: {
     icon: [{ url: "/brand/alcancemos-favicon.png", type: "image/png", sizes: "500x500" }],
@@ -19,8 +41,16 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#F8F8F8" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#0F0F10" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="es" className={playfair.variable}><body>{children}</body></html>;
+  return (
+    <html lang="es" className={`${bricolage.variable} ${inter.variable}`}>
+      <body className="bg-background text-foreground font-sans antialiased selection:bg-white/20 selection:text-white">
+        <ClientProviders>
+          {children}
+        </ClientProviders>
+      </body>
+    </html>
+  );
 }

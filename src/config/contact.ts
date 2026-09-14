@@ -1,13 +1,15 @@
-const whatsappMessage = `Hola 👋
-
-Quiero información sobre los servicios de Alcancemos.
-
-Vengo desde la página web.`;
-
-const whatsappParams = new URLSearchParams({ text: whatsappMessage });
+export function getWhatsAppNumber(): string {
+  const raw = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
+  return raw.replace(/\D/g, "");
+}
 
 export const contactConfig = {
-  whatsappUrl: `https://wa.me/56949662838?${whatsappParams.toString()}`,
+  get whatsappUrl(): string | null {
+    const num = getWhatsAppNumber();
+    if (!num || num.length < 8 || num.length > 16) return null;
+    const defaultMsg = encodeURIComponent("Hola, me gustaría conversar sobre cómo Alcancemos puede ayudarnos con nuestro sistema comercial.");
+    return `https://wa.me/${num}?text=${defaultMsg}`;
+  },
   email: "contacto@alcancemos.com",
 } as const;
 

@@ -1,0 +1,367 @@
+﻿/**
+ * ALCANCEMOS — ELEMENTOR DESIGN SYSTEM TOKENS & UTILITIES
+ * Version: 1.0.0 (Fase E0 - Foundations)
+ * Source of Truth: Alcancemos Web Next.js Production Build
+ */
+
+:root {
+  /* ==========================================================================
+     1. COLOR SYSTEM (HEX & RGBA)
+     ========================================================================== */
+  --alc-bg: #F8F8F6;
+  --alc-surface: #FFFFFF;
+  --alc-surface-subtle: #FAF9F6;
+  --alc-heading: #040112;
+  --alc-text: #111111;
+  --alc-muted: #666470;
+  --alc-accent: #FF0769;
+  --alc-accent-subtle: rgba(255, 7, 105, 0.08);
+  --alc-border: rgba(4, 1, 18, 0.06);
+  --alc-border-strong: rgba(4, 1, 18, 0.12);
+  --alc-border-interactive: rgba(4, 1, 18, 0.20);
+  
+  /* Status Colors */
+  --alc-success: #10B981;
+  --alc-success-bg: #ECFDF5;
+  --alc-success-border: #A7F3D0;
+  --alc-error: #EF4444;
+  --alc-error-bg: #FEF2F2;
+  --alc-error-border: #FECACA;
+
+  /* ==========================================================================
+     2. TYPOGRAPHY SYSTEM
+     ========================================================================== */
+  --alc-font-display: 'Bricolage Grotesque', sans-serif;
+  --alc-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Tracking / Letter Spacing */
+  --alc-tracking-tightest: -0.035em;
+  --alc-tracking-tighter: -0.025em;
+  --alc-tracking-tight: -0.015em;
+  --alc-tracking-normal: -0.01em;
+
+  /* ==========================================================================
+     3. LAYOUT & CONTAINERS
+     ========================================================================== */
+  --alc-container-max: 1320px;
+  --alc-container-narrow: 1200px;
+  --alc-container-reading: 840px;
+  --alc-container-px-desktop: 32px;
+  --alc-container-px-tablet: 24px;
+  --alc-container-px-mobile: 20px;
+
+  /* ==========================================================================
+     4. BORDER RADIUS
+     ========================================================================== */
+  --alc-radius-pill: 9999px;
+  --alc-radius-control-sm: 10px;
+  --alc-radius-control: 12px;
+  --alc-radius-control-lg: 14px;
+  --alc-radius-card-sm: 16px;
+  --alc-radius-card: 20px;
+  --alc-radius-card-lg: 24px;
+  --alc-radius-surface: 32px;
+
+  /* ==========================================================================
+     5. SHADOWS
+     ========================================================================== */
+  --alc-shadow-xs: 0 1px 2px rgba(4, 1, 18, 0.02);
+  --alc-shadow-subtle: 0 1px 3px rgba(4, 1, 18, 0.02), 0 6px 16px rgba(4, 1, 18, 0.03);
+  --alc-shadow-card: 0 4px 24px rgba(4, 1, 18, 0.02);
+  --alc-shadow-float: 0 10px 30px rgba(4, 1, 18, 0.045), 0 2px 8px rgba(4, 1, 18, 0.025);
+  --alc-shadow-header: 0 12px 40px rgba(4, 1, 18, 0.04);
+  
+  /* Button Shadows */
+  --alc-shadow-btn-primary: 0 1px 2px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.08);
+  --alc-shadow-btn-primary-hover: 0 8px 24px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.12);
+  --alc-shadow-btn-secondary: 0 1px 3px rgba(4, 1, 18, 0.02);
+
+  /* ==========================================================================
+     6. SECTION RHYTHM & PADDINGS
+     ========================================================================== */
+  --alc-section-py-xxl-desktop: 176px;
+  --alc-section-py-xxl-tablet: 144px;
+  --alc-section-py-xxl-mobile: 112px;
+
+  --alc-section-py-xl-desktop: 144px;
+  --alc-section-py-xl-tablet: 120px;
+  --alc-section-py-xl-mobile: 96px;
+
+  --alc-section-py-lg-desktop: 112px;
+  --alc-section-py-lg-tablet: 96px;
+  --alc-section-py-lg-mobile: 80px;
+
+  --alc-section-py-md-desktop: 80px;
+  --alc-section-py-md-tablet: 64px;
+  --alc-section-py-md-mobile: 56px;
+}
+
+/* ==========================================================================
+   GLOBAL RESET & ACCESSIBILITY
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--alc-accent);
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid var(--alc-accent) !important;
+  outline-offset: 2px !important;
+}
+
+/* ==========================================================================
+   REUSABLE CONTAINER PRIMITIVES
+   ========================================================================== */
+.alc-container {
+  width: 100%;
+  max-width: var(--alc-container-max);
+  margin-inline: auto;
+  padding-inline: var(--alc-container-px-desktop);
+  box-sizing: border-box;
+}
+
+.alc-container-narrow {
+  width: 100%;
+  max-width: var(--alc-container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--alc-container-px-desktop);
+  box-sizing: border-box;
+}
+
+.alc-container-reading {
+  width: 100%;
+  max-width: var(--alc-container-reading);
+  margin-inline: auto;
+  padding-inline: var(--alc-container-px-desktop);
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .alc-container,
+  .alc-container-narrow,
+  .alc-container-reading {
+    padding-inline: var(--alc-container-px-tablet);
+  }
+}
+
+@media (max-width: 767px) {
+  .alc-container,
+  .alc-container-narrow,
+  .alc-container-reading {
+    padding-inline: var(--alc-container-px-mobile);
+  }
+}
+
+/* ==========================================================================
+   SECTION RHYTHM CLASSES
+   ========================================================================== */
+.alc-section-xxl {
+  padding-block: var(--alc-section-py-xxl-desktop);
+}
+.alc-section-xl {
+  padding-block: var(--alc-section-py-xl-desktop);
+}
+.alc-section-lg {
+  padding-block: var(--alc-section-py-lg-desktop);
+}
+.alc-section-md {
+  padding-block: var(--alc-section-py-md-desktop);
+}
+
+@media (max-width: 1024px) {
+  .alc-section-xxl { padding-block: var(--alc-section-py-xxl-tablet); }
+  .alc-section-xl  { padding-block: var(--alc-section-py-xl-tablet); }
+  .alc-section-lg  { padding-block: var(--alc-section-py-lg-tablet); }
+  .alc-section-md  { padding-block: var(--alc-section-py-md-tablet); }
+}
+
+@media (max-width: 767px) {
+  .alc-section-xxl { padding-block: var(--alc-section-py-xxl-mobile); }
+  .alc-section-xl  { padding-block: var(--alc-section-py-xl-mobile); }
+  .alc-section-lg  { padding-block: var(--alc-section-py-lg-mobile); }
+  .alc-section-md  { padding-block: var(--alc-section-py-md-mobile); }
+}
+
+/* ==========================================================================
+   BUTTON PRIMITIVES
+   ========================================================================== */
+.alc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--alc-font-body);
+  font-weight: 500;
+  letter-spacing: var(--alc-tracking-normal);
+  text-decoration: none;
+  border-radius: var(--alc-radius-control);
+  min-height: 42px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 200ms ease;
+}
+
+.alc-btn:active {
+  transform: scale(0.985) translateY(0);
+}
+
+.alc-btn-lg {
+  min-height: 50px;
+  padding: 12px 28px;
+  font-size: 15px;
+  border-radius: var(--alc-radius-control-lg);
+}
+
+/* Primary: Sophisticated Graphite Gradient */
+.alc-btn-primary {
+  background: linear-gradient(180deg, #242424 0%, #141414 50%, #080808 100%);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--alc-shadow-btn-primary);
+}
+
+.alc-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--alc-shadow-btn-primary-hover);
+  color: #FFFFFF !important;
+}
+
+/* Secondary: Crisp White */
+.alc-btn-secondary {
+  background-color: var(--alc-surface);
+  color: var(--alc-heading) !important;
+  border: 1px solid rgba(4, 1, 18, 0.08);
+  box-shadow: var(--alc-shadow-btn-secondary);
+}
+
+.alc-btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--alc-border-interactive);
+}
+
+/* ==========================================================================
+   LABEL / EYEBROW BADGES
+   ========================================================================== */
+.alc-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--alc-radius-pill);
+  border: 1px solid var(--alc-border);
+  background-color: var(--alc-surface);
+  padding: 4px 14px;
+  font-family: var(--alc-font-body);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--alc-heading);
+  box-shadow: var(--alc-shadow-xs);
+  letter-spacing: var(--alc-tracking-tight);
+}
+
+.alc-label-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--alc-accent);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   SURFACE PRIMITIVES
+   ========================================================================== */
+.alc-surface {
+  background-color: var(--alc-surface);
+  border: 1px solid var(--alc-border);
+  border-radius: var(--alc-radius-card);
+  box-shadow: var(--alc-shadow-subtle);
+  box-sizing: border-box;
+}
+
+.alc-surface-soft {
+  background-color: rgba(250, 249, 246, 0.6);
+  border: 1px solid rgba(4, 1, 18, 0.06);
+  border-radius: var(--alc-radius-surface);
+  box-shadow: var(--alc-shadow-card);
+  box-sizing: border-box;
+}
+
+/* Floating System Event (Hero) */
+.alc-system-event {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--alc-radius-card-sm);
+  border: 1px solid rgba(4, 1, 18, 0.06);
+  background-color: rgba(255, 255, 255, 0.90);
+  padding: 10px 16px;
+  box-shadow: var(--alc-shadow-float);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ==========================================================================
+   DIVIDERS & ARCHITECTURAL RULES
+   ========================================================================== */
+.alc-divider-h {
+  width: 100%;
+  height: 1px;
+  background-color: var(--alc-border);
+  border: none;
+  margin: 0;
+}
+
+.alc-divider-v {
+  width: 1px;
+  height: 100%;
+  min-height: 16px;
+  background-color: var(--alc-border);
+  border: none;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FORM CONTROLS (ELEMENTOR FORM OVERRIDES)
+   ========================================================================== */
+.alc-input,
+.elementor-form .elementor-field-textual {
+  min-height: 48px;
+  width: 100%;
+  border-radius: var(--alc-radius-control) !important;
+  border: 1px solid var(--alc-border) !important;
+  background-color: var(--alc-surface) !important;
+  padding: 12px 16px !important;
+  font-family: var(--alc-font-body) !important;
+  font-size: 15px !important;
+  color: var(--alc-heading) !important;
+  box-sizing: border-box;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+  outline: none !important;
+}
+
+.alc-input:hover,
+.elementor-form .elementor-field-textual:hover {
+  border-color: var(--alc-border-interactive) !important;
+}
+
+.alc-input:focus,
+.elementor-form .elementor-field-textual:focus {
+  border-color: var(--alc-accent) !important;
+  box-shadow: 0 0 0 1px var(--alc-accent) !important;
+}

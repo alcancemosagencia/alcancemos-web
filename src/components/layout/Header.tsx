@@ -8,14 +8,16 @@ import { usePathname } from "next/navigation";
 import { navigationItems } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
+import { useLeadModal } from "@/context/LeadModalContext";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { openLeadModal } = useLeadModal();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => setScrolled(window.scrollY > 16);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -43,34 +45,106 @@ export function Header() {
   }, [open]);
 
   const closeMenu = () => setOpen(false);
-  const desktopItems = [
-    { label: "Ecosistema", href: "#servicios" },
-    { label: "Casos de éxito", href: "#casos" },
-    { label: "Filosofía", href: "#nosotros" },
-    { label: "Recursos", href: "#proceso" },
-  ] as const;
+
+  const handleOpenLeadModal = () => {
+    closeMenu();
+    openLeadModal("header_cta");
+  };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-5 sm:px-8 lg:px-12">
-      <div className={cn("mx-auto max-w-[1440px] transition-[background-color,backdrop-filter,box-shadow,border-radius] duration-300", scrolled || open ? "rounded-b-2xl bg-[rgba(248,248,248,0.92)] shadow-[0_10px_35px_rgba(4,1,18,0.04)] backdrop-blur-xl" : "bg-transparent")}>
-        <nav aria-label="Navegación principal" className={cn("flex h-[100px] items-center transition-[height] duration-300", scrolled ? "h-[72px]" : "h-[100px]")}>
-          <Link href="#inicio" onClick={closeMenu} aria-label="Alcancemos, ir al inicio" className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-            <Image src="/brand/alcancemos-logo-dark.png" alt="Alcancemos" width={2757} height={500} priority className="h-auto w-[178px] sm:w-[210px]" />
+    <header className="fixed inset-x-0 top-0 z-40 px-4 sm:px-6 lg:px-8">
+      <div
+        className={cn(
+          "mx-auto max-w-[1180px] transition-all duration-300",
+          scrolled || open
+            ? "mt-3 rounded-2xl border border-white/[0.08] bg-[#141416]/90 shadow-[0_12px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl"
+            : "mt-3 sm:mt-4 rounded-2xl border border-white/[0.04] bg-[#141416]/50 backdrop-blur-md"
+        )}
+      >
+        <nav
+          aria-label="Navegación principal"
+          className={cn(
+            "flex items-center px-4 sm:px-6 transition-[height] duration-300",
+            scrolled ? "h-[58px]" : "h-[64px] sm:h-[70px]"
+          )}
+        >
+          <Link
+            href="#inicio"
+            onClick={closeMenu}
+            aria-label="Alcancemos, ir al inicio"
+            className="shrink-0 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          >
+            <Image
+              src="/brand/alcancemos-logo-light.png"
+              alt="Alcancemos"
+              width={2757}
+              height={500}
+              priority
+              className="h-auto w-[140px] sm:w-[155px]"
+            />
           </Link>
-          <div className="ml-auto hidden items-center gap-12 lg:flex xl:gap-[3.75rem]">
-            {desktopItems.map((item) => <Link key={item.href} href={item.href} className="whitespace-nowrap text-[15px] font-medium tracking-[-0.025em] text-heading transition-opacity hover:opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">{item.label}</Link>)}
+
+          <div className="ml-auto hidden items-center gap-8 lg:flex xl:gap-10">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="whitespace-nowrap text-[13.5px] font-medium tracking-[-0.01em] text-[#A1A1AA] transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
-          <div className="ml-auto hidden lg:block lg:ml-[clamp(3rem,10vw,15rem)]"><Button href="#contacto" icon={<ArrowUpRight size={17} strokeWidth={1.7} aria-hidden />} className="rounded-xl border-accent px-6 py-3.5 text-base shadow-none">Hablemos</Button></div>
-          <button type="button" aria-label={open ? "Cerrar menú" : "Abrir menú"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen((value) => !value)} className="ml-7 inline-flex h-11 w-11 items-center justify-center text-heading focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-            {open ? <X size={25} strokeWidth={1.4} aria-hidden /> : <span className="header-menu" aria-hidden="true"><i /><i /><i /></span>}
+
+          <div className="ml-auto hidden items-center lg:flex lg:ml-8">
+            <Button
+              onClick={handleOpenLeadModal}
+              size="normal"
+              icon={<ArrowUpRight size={14} strokeWidth={2.2} aria-hidden />}
+            >
+              Hablemos
+            </Button>
+          </div>
+
+          <button
+            type="button"
+            aria-label={open ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            onClick={() => setOpen((value) => !value)}
+            className="ml-auto inline-flex h-9 w-9 items-center justify-center rounded-lg text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:hidden"
+          >
+            {open ? (
+              <X size={22} strokeWidth={2} aria-hidden />
+            ) : (
+              <span className="header-menu" aria-hidden="true">
+                <i className="!bg-white" />
+                <i className="!bg-white" />
+                <i className="!bg-white" />
+              </span>
+            )}
           </button>
         </nav>
-        {open ? <div id="mobile-navigation" className="border-t border-border/70 px-4 pb-5 pt-4">
-          <div className="flex max-h-[calc(100vh-110px)] flex-col gap-1 overflow-y-auto">
-            {navigationItems.map((item) => <Link key={item.href} href={item.href} onClick={closeMenu} className="rounded-2xl px-3 py-2.5 text-base font-medium text-heading transition hover:bg-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{item.href === "#servicios" ? "Ecosistema" : item.href === "#nosotros" ? "Filosofía" : item.label}</Link>)}
-            <Button href="#contacto" className="mt-3" onClick={closeMenu}>Hablemos</Button>
+
+        {open ? (
+          <div id="mobile-navigation" className="border-t border-white/[0.08] px-4 pb-6 pt-4 lg:hidden">
+            <div className="flex max-h-[calc(100vh-120px)] flex-col gap-1.5 overflow-y-auto">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="rounded-xl px-3.5 py-2.5 text-[15px] font-medium text-[#E4E4E7] transition hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Button onClick={handleOpenLeadModal} className="mt-3 w-full py-3 text-base">
+                Hablemos
+              </Button>
+            </div>
           </div>
-        </div> : null}
+        ) : null}
       </div>
     </header>
   );

@@ -1,7 +1,51 @@
-export const processSteps = [
-  { number: "01", emoji: "🧠", title: "Ingeniería Comercial", description: "Entendemos el negocio antes de invertir un peso.", visualClass: "workflow-step--one" },
-  { number: "02", emoji: "📈", title: "Performance Marketing", description: "Generamos oportunidades con intención real de compra.", visualClass: "workflow-step--two" },
-  { number: "03", emoji: "🧲", title: "Conversión", description: "Transformamos visitas en oportunidades.", visualClass: "workflow-step--three" },
-  { number: "04", emoji: "🤖", title: "Agentes IA", description: "Atienden, califican y hacen seguimiento automáticamente.", visualClass: "workflow-step--four" },
-  { number: "05", emoji: "📊", title: "Optimización Continua", description: "Todo se mide. Todo mejora. Todo evoluciona.", visualClass: "workflow-step--five" },
-] as const;
+export interface ImplementationStage {
+  number: string;
+  name: string;
+  stateBadge: string;
+  summary: string;
+  detail: string;
+  milestone: string;
+}
+
+export const implementationStages: ImplementationStage[] = [
+  {
+    number: "01",
+    name: "Diagnóstico",
+    stateBadge: "Mapa operativo",
+    summary: "Encontramos dónde se rompe la operación actual.",
+    detail: "Auditamos la oferta, adquisición, atención y seguimiento para identificar exactamente qué piezas y flujos deben intervenirse.",
+    milestone: "Mapeo de arquitectura y alcance técnico",
+  },
+  {
+    number: "02",
+    name: "Arquitectura",
+    stateBadge: "Sistema definido",
+    summary: "Diseñamos la operación antes de construir.",
+    detail: "Modelamos la interacción entre personas, herramientas, agentes IA y CRM para asegurar continuidad en cada contacto.",
+    milestone: "Blueprint integral de conversión y datos",
+  },
+  {
+    number: "03",
+    name: "Implementación",
+    stateBadge: "Infraestructura conectada",
+    summary: "Construimos y conectamos la infraestructura definida.",
+    detail: "Desarrollamos embudos, configuramos campañas Meta Ads, integramos el CRM y programamos agentes IA de calificación.",
+    milestone: "Ecosistema configurado y testeado",
+  },
+  {
+    number: "04",
+    name: "Activación",
+    stateBadge: "Operación activa",
+    summary: "Probamos el sistema con operación real.",
+    detail: "Encendemos el enrutamiento con demanda en vivo, validando tiempos de respuesta, handoff a ventas y captura de datos.",
+    milestone: "Calibración en vivo y handoff validado",
+  },
+  {
+    number: "05",
+    name: "Optimización",
+    stateBadge: "Medición continua",
+    summary: "Medimos el rendimiento y optimizamos sobre evidencia.",
+    detail: "Analizamos el pipeline comercial de punta a punta para ajustar creativos, atención y seguimiento según ventas reales.",
+    milestone: "Iteración sobre retorno y eficiencia",
+  },
+];

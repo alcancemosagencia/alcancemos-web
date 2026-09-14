@@ -1,0 +1,1814 @@
+{
+  "content": [
+    {
+      "id": "9a1c796",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "Hero Section",
+        "content_width": "full",
+        "_css_classes": "alc-section-hero",
+        "custom_id": "inicio",
+        "background_background": "classic",
+        "background_color": "#F8F8F6",
+        "padding": {
+          "unit": "px",
+          "top": "148",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "132",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "108",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center"
+      },
+      "elements": [
+        {
+          "id": "ab05a89",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1320
+            },
+            "_css_classes": "alc-container",
+            "flex_direction": "row",
+            "flex_direction_tablet": "column",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "column": "40",
+              "row": "40",
+              "isLinked": true,
+              "unit": "px",
+              "size": 40
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "32",
+              "bottom": "80",
+              "left": "32",
+              "isLinked": false
+            },
+            "padding_tablet": {
+              "unit": "px",
+              "top": "0",
+              "right": "24",
+              "bottom": "60",
+              "left": "24",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "0",
+              "right": "20",
+              "bottom": "48",
+              "left": "20",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "97bf189",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "Hero Left Column",
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 52
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 100
+                },
+                "flex_direction": "column",
+                "flex_align_items": "flex-start",
+                "flex_gap": {
+                  "column": "24",
+                  "row": "24",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 24
+                }
+              },
+              "elements": [
+                {
+                  "id": "df7b2ac",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "<span class=\"alc-label\"><span class=\"alc-label-dot\"></span>Infraestructura comercial integrada</span>",
+                    "header_size": "span",
+                    "_title": "Hero Label",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 12
+                    },
+                    "typography_font_weight": "500",
+                    "title_color": "#040112"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "5f1c951",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "No te faltan leads.<br>Te falta un <span class=\"alc-accent\">sistema</span> comercial.",
+                    "header_size": "h1",
+                    "_title": "Hero H1",
+                    "_css_classes": "alc-h1",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Bricolage Grotesque",
+                    "typography_font_weight": "500",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 70
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 50
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 38
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.04
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "em",
+                      "size": -0.035
+                    },
+                    "title_color": "#040112"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "cfb7315",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Conectamos estrategia, Meta Ads, agentes de Inteligencia Artificial y seguimiento automatizado para que ninguna oportunidad se pierda y cada venta sea medible.</p>",
+                    "_title": "Hero Subcopy",
+                    "_css_classes": "alc-subcopy",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.65
+                    },
+                    "text_color": "#666470"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "b41b6d1",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "Hero Buttons",
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_gap": {
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 16
+                    },
+                    "margin": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "3bb8f6c",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Evaluar mi estrategia",
+                        "link": {
+                          "url": "#contacto",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_title": "Button",
+                        "_css_classes": "alc-btn alc-btn-lg alc-btn-primary",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15
+                        },
+                        "typography_font_weight": "500"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "d21b68f",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Ver cómo funciona",
+                        "link": {
+                          "url": "#ecosistema",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_title": "Button",
+                        "_css_classes": "alc-btn alc-btn-lg alc-btn-secondary",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15
+                        },
+                        "typography_font_weight": "500"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "78edbe0",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "Hero Value Props",
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "wrap",
+                    "flex_gap": {
+                      "column": "20",
+                      "row": "12",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 20
+                    },
+                    "margin": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_color": "rgba(4, 1, 18, 0.06)"
+                  },
+                  "elements": [
+                    {
+                      "id": "d49e474",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<span style=\"display:flex;align-items:center;gap:8px;font-size:13px;color:#666470;\"><span style=\"color:#10B981;\">✓</span> Meta Ads + Agentes IA + CRM</span>",
+                        "_title": "Text Editor",
+                        "typography_font_family": "Inter"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7a876c9",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<span style=\"font-size:13px;font-weight:500;color:#040112;\">Instalación en 14 días</span>",
+                        "_title": "Text Editor",
+                        "typography_font_family": "Inter"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "4b37527",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<span style=\"font-size:13px;font-weight:500;color:#040112;\">Retorno medible</span>",
+                        "_title": "Text Editor",
+                        "typography_font_family": "Inter"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "f6088bc",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "Hero Right Visual",
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 48
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 100
+                },
+                "_css_classes": "alc-hero-visual-wrapper",
+                "position": "relative",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_justify_content": "center",
+                "min_height": {
+                  "unit": "px",
+                  "size": 540
+                },
+                "min_height_mobile": {
+                  "unit": "px",
+                  "size": 420
+                }
+              },
+              "elements": [
+                {
+                  "id": "dc3de2f",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "Robot Container",
+                    "content_width": "full",
+                    "_css_classes": "alc-robot-mask",
+                    "flex_direction": "column",
+                    "flex_align_items": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "2fc2a03",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://alcancemos.com/wp-content/uploads/2026/01/robot-hero.png",
+                          "id": "",
+                          "size": "",
+                          "alt": "",
+                          "source": "library"
+                        },
+                        "_title": "Robot Hero",
+                        "align": "center",
+                        "_css_classes": "alc-robot-img"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "b403827",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "System Event 1",
+                    "content_width": "full",
+                    "_css_classes": "alc-system-event alc-event-pos-1",
+                    "position": "absolute"
+                  },
+                  "elements": [
+                    {
+                      "id": "f323f51",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "html",
+                      "settings": {
+                        "html": "<div class=\"alc-event-body\"><span class=\"alc-event-dot bg-emerald\"></span><div><span class=\"alc-event-label\">Lead calificado</span><strong class=\"alc-event-title\">Distribuidora B2B</strong></div></div>",
+                        "_title": "HTML"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "0fb8375",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "System Event 2",
+                    "content_width": "full",
+                    "_css_classes": "alc-system-event alc-event-pos-2",
+                    "position": "absolute"
+                  },
+                  "elements": [
+                    {
+                      "id": "237a84f",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "html",
+                      "settings": {
+                        "html": "<div class=\"alc-event-body\"><span class=\"alc-event-dot bg-accent\"></span><div><span class=\"alc-event-label\">Respuesta IA</span><strong class=\"alc-event-title\">En 8 segundos</strong></div></div>",
+                        "_title": "HTML"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "cc9b8d5",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "System Event 3",
+                    "content_width": "full",
+                    "_css_classes": "alc-system-event alc-event-pos-3",
+                    "position": "absolute"
+                  },
+                  "elements": [
+                    {
+                      "id": "5e5adab",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "html",
+                      "settings": {
+                        "html": "<div class=\"alc-event-body\"><span class=\"alc-event-dot bg-heading\"></span><div><span class=\"alc-event-label\">Reunión agendada</span><strong class=\"alc-event-title\">Martes · 10:30</strong></div></div>",
+                        "_title": "HTML"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "21415f2",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "Hero Golden Rule Bridge",
+            "content_width": "full",
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "rgba(4, 1, 18, 0.06)",
+            "padding": {
+              "unit": "px",
+              "top": "100",
+              "right": "0",
+              "bottom": "100",
+              "left": "0",
+              "isLinked": false
+            },
+            "padding_tablet": {
+              "unit": "px",
+              "top": "80",
+              "right": "0",
+              "bottom": "80",
+              "left": "0",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "60",
+              "right": "0",
+              "bottom": "60",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "22a0977",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                  "unit": "px",
+                  "size": 1320
+                },
+                "_css_classes": "alc-container",
+                "flex_direction": "row",
+                "flex_direction_tablet": "column",
+                "flex_gap": {
+                  "column": "48",
+                  "row": "32",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [
+                {
+                  "id": "94c5f1b",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "width": {
+                      "unit": "%",
+                      "size": 45
+                    },
+                    "width_tablet": {
+                      "unit": "%",
+                      "size": 100
+                    },
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 16
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "1a14212",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "<span class=\"alc-label\"><span class=\"alc-label-dot\"></span>La regla de oro comercial</span>",
+                        "header_size": "span",
+                        "_title": "Heading"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "ae78bd9",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Hasta el 60% de las oportunidades se pierden por <span class=\"alc-accent\">lentitud de respuesta</span> y falta de seguimiento.",
+                        "header_size": "h2",
+                        "_title": "Heading",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Bricolage Grotesque",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 36
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 26
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.12
+                        },
+                        "title_color": "#040112"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2ee171c",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "width": {
+                      "unit": "%",
+                      "size": 55
+                    },
+                    "width_tablet": {
+                      "unit": "%",
+                      "size": 100
+                    },
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "24",
+                      "row": "24",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 24
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "32",
+                      "isLinked": false
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "1",
+                      "isLinked": false
+                    },
+                    "border_width_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "border_color": "rgba(4, 1, 18, 0.06)"
+                  },
+                  "elements": [
+                    {
+                      "id": "1661576",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p class=\"alc-subcopy\">Generar atención con publicidad sin un sistema de atención inmediata y seguimiento riguroso deja dinero sobre la mesa. El <strong style=\"color:#040112;font-weight:500;\">Ecosistema Alcancemos</strong> une la adquisición, la IA y la automatización en un solo engranaje predecible.</p>",
+                        "_title": "Text Editor",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        },
+                        "text_color": "#666470"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "6be9618",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "html",
+                      "settings": {
+                        "html": "<div class=\"alc-capability-path\"><span>01 Ingeniería comercial</span><i>→</i><span>02 Meta Ads</span><i>→</i><span>03 Embudos</span><i>→</i><span>04 Agentes IA</span><i>→</i><span>05 Seguimiento</span></div>",
+                        "_title": "HTML"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "58ed4eb",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "Ecosystem Section",
+        "content_width": "full",
+        "_css_classes": "alc-section-ecosystem alc-section-xxl",
+        "custom_id": "ecosistema",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "144",
+          "right": "0",
+          "bottom": "144",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "112",
+          "right": "0",
+          "bottom": "112",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center"
+      },
+      "elements": [
+        {
+          "id": "72e45a3",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1320
+            },
+            "_css_classes": "alc-container",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "column": "60",
+              "row": "60",
+              "isLinked": true,
+              "unit": "px",
+              "size": 60
+            }
+          },
+          "elements": [
+            {
+              "id": "428a778",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "max_width": {
+                  "unit": "px",
+                  "size": 840
+                },
+                "_css_classes": "alc-container-reading",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 16
+                }
+              },
+              "elements": [
+                {
+                  "id": "5ddaf91",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "<span class=\"alc-label\"><span class=\"alc-label-dot\"></span>Ecosistema comercial</span>",
+                    "header_size": "span",
+                    "_title": "Heading"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "d4cd48b",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Cinco capacidades.<br>Un <span class=\"alc-accent\">sistema</span> comercial.",
+                    "header_size": "h2",
+                    "_title": "Heading",
+                    "align": "center",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Bricolage Grotesque",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 56
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.06
+                    },
+                    "title_color": "#040112"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "76f6328",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"text-align:center;\">Diseñamos, operamos y conectamos cada fase de la adquisición y atención de clientes para que funcionen como un solo motor predecible.</p>",
+                    "_title": "Text Editor",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.65
+                    },
+                    "text_color": "#666470"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "2318b90",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "_css_classes": "alc-ecosystem-canvas",
+                "background_background": "classic",
+                "background_color": "#FAF9F6",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(4, 1, 18, 0.06)",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "48",
+                  "right": "48",
+                  "bottom": "48",
+                  "left": "48",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "20",
+                  "bottom": "28",
+                  "left": "20",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "46e3436",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"alc-ecosystem-grid\">\n                <div class=\"alc-eco-card\">\n                  <span class=\"alc-eco-num\">01</span>\n                  <h3>Ingeniería comercial</h3>\n                  <p>Diagnóstico de canales, arquitectura de conversión y definición de métricas.</p>\n                </div>\n                <div class=\"alc-eco-card\">\n                  <span class=\"alc-eco-num\">02</span>\n                  <h3>Meta Ads avanzado</h3>\n                  <p>Segmentación B2B, creativos de alto impacto y captación de demanda calificada.</p>\n                </div>\n                <div class=\"alc-eco-card\">\n                  <span class=\"alc-eco-num\">03</span>\n                  <h3>Embudos de conversión</h3>\n                  <p>Páginas de aterrizaje optimizadas, formularios inteligentes y calificación inmediata.</p>\n                </div>\n                <div class=\"alc-eco-card\">\n                  <span class=\"alc-eco-num\">04</span>\n                  <h3>Agentes de IA</h3>\n                  <p>Calificación conversacional en WhatsApp, resolución de dudas y agenda de reuniones.</p>\n                </div>\n                <div class=\"alc-eco-card\">\n                  <span class=\"alc-eco-num\">05</span>\n                  <h3>Automatización & CRM</h3>\n                  <p>Sincronización de pipeline, recordatorios automáticos y trazabilidad de ingresos.</p>\n                </div>\n              </div>\n              <div class=\"alc-eco-result-bar\">\n                <span class=\"alc-eco-res-tag\">Resultado del sistema integrado</span>\n                <div class=\"alc-eco-res-items\">\n                  <span>Respuesta automatizada</span>\n                  <i>•</i>\n                  <span>Seguimiento sistemático</span>\n                  <i>•</i>\n                  <span class=\"alc-accent-text\">Retorno medible</span>\n                </div>\n              </div>",
+                    "_title": "HTML"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "709c4c6",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "Fragmentation Section",
+        "content_width": "full",
+        "_css_classes": "alc-section-fragmentation alc-section-xl",
+        "custom_id": "problemas",
+        "background_background": "classic",
+        "background_color": "#F8F8F6",
+        "padding": {
+          "unit": "px",
+          "top": "144",
+          "right": "0",
+          "bottom": "144",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "112",
+          "right": "0",
+          "bottom": "112",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center"
+      },
+      "elements": [
+        {
+          "id": "f32ea73",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1320
+            },
+            "_css_classes": "alc-container",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "column": "60",
+              "row": "60",
+              "isLinked": true,
+              "unit": "px",
+              "size": 60
+            }
+          },
+          "elements": [
+            {
+              "id": "46bb6cf",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "max_width": {
+                  "unit": "px",
+                  "size": 840
+                },
+                "_css_classes": "alc-container-reading",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 16
+                }
+              },
+              "elements": [
+                {
+                  "id": "6b9655e",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "<span class=\"alc-label\"><span class=\"alc-label-dot\"></span>Fragmentación operativa</span>",
+                    "header_size": "span",
+                    "_title": "Heading"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "18a99dc",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "No necesitas más herramientas.<br>Necesitas que trabajen <span class=\"alc-accent\">juntas</span>.",
+                    "header_size": "h2",
+                    "_title": "Heading",
+                    "align": "center",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Bricolage Grotesque",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 56
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.06
+                    },
+                    "title_color": "#040112"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "9374950",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"text-align:center;\">El problema de la mayoría de las empresas no es la falta de herramientas, sino la pérdida de oportunidades entre sistemas que no se comunican.</p>",
+                    "_title": "Text Editor",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.65
+                    },
+                    "text_color": "#666470"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "ab07855",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "_css_classes": "alc-fragmentation-canvas",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(4, 1, 18, 0.06)",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "48",
+                  "right": "48",
+                  "bottom": "48",
+                  "left": "48",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "20",
+                  "bottom": "28",
+                  "left": "20",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "177e3db",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"alc-fragmentation-flow\">\n                <div class=\"alc-frag-step\">\n                  <div class=\"alc-frag-node\">Meta Ads</div>\n                  <div class=\"alc-frag-leak\">✕ Sin respuesta a tiempo</div>\n                </div>\n                <div class=\"alc-frag-step\">\n                  <div class=\"alc-frag-node\">WhatsApp</div>\n                  <div class=\"alc-frag-leak\">✕ Seguimiento manual</div>\n                </div>\n                <div class=\"alc-frag-step\">\n                  <div class=\"alc-frag-node\">CRM</div>\n                  <div class=\"alc-frag-leak\">✕ Datos fragmentados</div>\n                </div>\n                <div class=\"alc-frag-step\">\n                  <div class=\"alc-frag-node\">Dirección / Ventas</div>\n                </div>\n              </div>\n              <div class=\"alc-opportunity-token-stagnant\">\n                <span class=\"alc-token-dot\"></span>\n                <span>Oportunidad comercial detenida entre sistemas • Sin continuidad ni trazabilidad</span>\n              </div>\n              <div class=\"alc-convergence-bar\">\n                <span class=\"alc-conv-tag\">Convergencia en tiempo real</span>\n                <div class=\"alc-conv-items\">\n                  <span>Contexto unificado</span>\n                  <i>•</i>\n                  <span>Seguimiento sistemático</span>\n                  <i>•</i>\n                  <span class=\"alc-accent-text\">Trazabilidad comercial</span>\n                </div>\n              </div>",
+                    "_title": "HTML"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0085aaf",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "Process Section",
+        "content_width": "full",
+        "_css_classes": "alc-section-process alc-section-xl",
+        "custom_id": "proceso",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "144",
+          "right": "0",
+          "bottom": "144",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "112",
+          "right": "0",
+          "bottom": "112",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center"
+      },
+      "elements": [
+        {
+          "id": "448b902",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1320
+            },
+            "_css_classes": "alc-container",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "column": "60",
+              "row": "60",
+              "isLinked": true,
+              "unit": "px",
+              "size": 60
+            }
+          },
+          "elements": [
+            {
+              "id": "8cc0973",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "max_width": {
+                  "unit": "px",
+                  "size": 840
+                },
+                "_css_classes": "alc-container-reading",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 16
+                }
+              },
+              "elements": [
+                {
+                  "id": "2e2566a",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "<span class=\"alc-label\"><span class=\"alc-label-dot\"></span>Sistema de implementación</span>",
+                    "header_size": "span",
+                    "_title": "Heading"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "2130c94",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Primero diseñamos el sistema.<br>Después lo ponemos a <span class=\"alc-accent\">trabajar</span>.",
+                    "header_size": "h2",
+                    "_title": "Heading",
+                    "align": "center",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Bricolage Grotesque",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 56
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.06
+                    },
+                    "title_color": "#040112"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "8a3b9d7",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"text-align:center;\">Analizamos cómo vende hoy la empresa, diseñamos la arquitectura necesaria y conectamos cada pieza hasta dejar un sistema operativo, medible y listo para escalar.</p>",
+                    "_title": "Text Editor",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.65
+                    },
+                    "text_color": "#666470"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "fecc861",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "_css_classes": "alc-process-canvas",
+                "background_background": "classic",
+                "background_color": "#FAF9F6",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(4, 1, 18, 0.06)",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "48",
+                  "right": "48",
+                  "bottom": "48",
+                  "left": "48",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "20",
+                  "bottom": "28",
+                  "left": "20",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "c404572",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"alc-stages-sequence\">\n                <div class=\"alc-stage-item\">\n                  <div class=\"alc-stage-num\">01</div>\n                  <div class=\"alc-stage-content\">\n                    <span class=\"alc-stage-badge\">Diagnóstico</span>\n                    <h3>Auditoría de captación y atención</h3>\n                    <p>Mapeo de fugas comerciales, fricciones operativas y definición de arquitectura requerida.</p>\n                    <div class=\"alc-stage-deliverable\">Entregable: Mapa de fugas y oportunidades</div>\n                  </div>\n                </div>\n                <div class=\"alc-stage-item\">\n                  <div class=\"alc-stage-num\">02</div>\n                  <div class=\"alc-stage-content\">\n                    <span class=\"alc-stage-badge\">Arquitectura</span>\n                    <h3>Diseño del flujo comercial integrado</h3>\n                    <p>Estructuración de embudos, protocolos de agentes IA y sincronización de CRM.</p>\n                    <div class=\"alc-stage-deliverable\">Entregable: Blueprint técnico comercial</div>\n                  </div>\n                </div>\n                <div class=\"alc-stage-item\">\n                  <div class=\"alc-stage-num\">03</div>\n                  <div class=\"alc-stage-content\">\n                    <span class=\"alc-stage-badge\">Implementación</span>\n                    <h3>Conexión e instalación técnica</h3>\n                    <p>Configuración de Meta Ads, automatizaciones de pipeline y entrenamiento de agentes IA.</p>\n                    <div class=\"alc-stage-deliverable\">Entregable: Infraestructura técnica configurada</div>\n                  </div>\n                </div>\n                <div class=\"alc-stage-item\">\n                  <div class=\"alc-stage-num\">04</div>\n                  <div class=\"alc-stage-content\">\n                    <span class=\"alc-stage-badge\">Activación</span>\n                    <h3>Puesta en marcha y calibración</h3>\n                    <p>Pruebas de estrés de respuesta, calificación en vivo y sincronización con el equipo de ventas.</p>\n                    <div class=\"alc-stage-deliverable\">Entregable: Sistema en producción</div>\n                  </div>\n                </div>\n                <div class=\"alc-stage-item\">\n                  <div class=\"alc-stage-num\">05</div>\n                  <div class=\"alc-stage-content\">\n                    <span class=\"alc-stage-badge\">Optimización</span>\n                    <h3>Escalamiento y retorno medible</h3>\n                    <p>Monitoreo de ROAS, optimización continua de conversión y soporte operativo permanente.</p>\n                    <div class=\"alc-stage-deliverable\">Entregable: Reportes de facturación y retorno</div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"alc-process-summary-bar\">\n                <span>El resultado final no es una lista de herramientas. Es un sistema comercial funcionando.</span>\n              </div>",
+                    "_title": "HTML"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "35bad37",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "Evidence Section",
+        "content_width": "full",
+        "_css_classes": "alc-section-evidence alc-section-xxl",
+        "custom_id": "casos",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "144",
+          "right": "0",
+          "bottom": "144",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "112",
+          "right": "0",
+          "bottom": "112",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center"
+      },
+      "elements": [
+        {
+          "id": "d8f5c90",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1320
+            },
+            "_css_classes": "alc-container",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": {
+              "column": "60",
+              "row": "60",
+              "isLinked": true,
+              "unit": "px",
+              "size": 60
+            }
+          },
+          "elements": [
+            {
+              "id": "dabd4a2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "max_width": {
+                  "unit": "px",
+                  "size": 840
+                },
+                "_css_classes": "alc-container-reading",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 16
+                }
+              },
+              "elements": [
+                {
+                  "id": "92f73c2",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "<span class=\"alc-label\"><span class=\"alc-label-dot\"></span>Evidencia comercial</span>",
+                    "header_size": "span",
+                    "_title": "Heading"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "932dd65",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Sistemas que se miden<br>por lo que <span class=\"alc-accent\">producen</span>.",
+                    "header_size": "h2",
+                    "_title": "Heading",
+                    "align": "center",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Bricolage Grotesque",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 56
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.06
+                    },
+                    "title_color": "#040112"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "7524c94",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"text-align:center;\">Evaluamos el sistema por su retorno comercial y ventas atribuibles, no por la cantidad de campañas, herramientas o automatizaciones instaladas.</p>",
+                    "_title": "Text Editor",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.65
+                    },
+                    "text_color": "#666470"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "42c80ef",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "max_width": {
+                  "unit": "px",
+                  "size": 1180
+                },
+                "_css_classes": "alc-evidence-card",
+                "background_background": "classic",
+                "background_color": "#FAF9F6",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(4, 1, 18, 0.06)",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "56",
+                  "right": "56",
+                  "bottom": "56",
+                  "left": "56",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "24",
+                  "bottom": "32",
+                  "left": "24",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "33cb595",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"alc-case-header\">\n                <div class=\"alc-case-brand\">\n                  <img src=\"https://alcancemos.com/wp-content/uploads/2026/01/casa-telas-dark.png\" alt=\"Logo Casa & Telas\" class=\"alc-case-logo\" />\n                  <div class=\"alc-case-meta\">\n                    <h3>Casa & Telas</h3>\n                    <span>Empresa Textil</span>\n                  </div>\n                </div>\n                <div class=\"alc-case-period-badge\">\n                  <span>Periodo analizado:</span> <strong>Mayo — julio de 2025</strong>\n                </div>\n              </div>\n\n              <div class=\"alc-case-metric-hero\">\n                <span class=\"alc-metric-sub\">Retorno sobre inversión publicitaria</span>\n                <div class=\"alc-metric-value\">26.35x</div>\n                <span class=\"alc-metric-badge\">ROAS comercial atribuible</span>\n              </div>\n\n              <div class=\"alc-case-financial-ledger\">\n                <div class=\"alc-ledger-item\">\n                  <span class=\"alc-ledger-label\">Inversión publicitaria gestionada</span>\n                  <strong class=\"alc-ledger-val\">$400.000 CLP</strong>\n                </div>\n                <div class=\"alc-ledger-arrow\">→</div>\n                <div class=\"alc-ledger-item alc-ledger-dominant\">\n                  <span class=\"alc-ledger-label\">Facturación comercial atribuible</span>\n                  <strong class=\"alc-ledger-val alc-val-lg\">$10.540.000 CLP</strong>\n                </div>\n              </div>\n\n              <div class=\"alc-case-mechanism\">\n                <p><strong>Mecanismo implementado:</strong> Expansión comercial y captación de clientes de mayor volumen fuera de venta local.</p>\n              </div>",
+                    "_title": "HTML"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fdf44f6",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "Philosophy Section",
+        "content_width": "full",
+        "_css_classes": "alc-section-philosophy alc-section-xxl",
+        "custom_id": "filosofia",
+        "background_background": "classic",
+        "background_color": "#F8F8F6",
+        "padding": {
+          "unit": "px",
+          "top": "144",
+          "right": "0",
+          "bottom": "144",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "112",
+          "right": "0",
+          "bottom": "112",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center"
+      },
+      "elements": [
+        {
+          "id": "9751571",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1200
+            },
+            "_css_classes": "alc-container alc-container-narrow",
+            "flex_direction": "column",
+            "flex_gap": {
+              "column": "64",
+              "row": "64",
+              "isLinked": true,
+              "unit": "px",
+              "size": 64
+            }
+          },
+          "elements": [
+            {
+              "id": "07261a2",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "max_width": {
+                  "unit": "px",
+                  "size": 840
+                },
+                "flex_direction": "column",
+                "flex_align_items": "flex-start",
+                "flex_gap": {
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 16
+                }
+              },
+              "elements": [
+                {
+                  "id": "acf7879",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "<span class=\"alc-label\"><span class=\"alc-label-dot\"></span>Criterio de ingeniería</span>",
+                    "header_size": "span",
+                    "_title": "Heading"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c55b743",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "No administramos herramientas.<br>Diseñamos criterio <span class=\"alc-accent\">operativo</span>.",
+                    "header_size": "h2",
+                    "_title": "Heading",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Bricolage Grotesque",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 56
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.06
+                    },
+                    "title_color": "#040112"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "3b3c589",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Cómo decidimos qué automatizar, qué medir y dónde intervenir para que la tecnología trabaje con propósito a favor del negocio.</p>",
+                    "_title": "Text Editor",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.65
+                    },
+                    "text_color": "#666470"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "3e2aa04",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "_css_classes": "alc-principles-stack",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "0",
+                  "bottom": "1",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_color": "rgba(4, 1, 18, 0.06)"
+              },
+              "elements": [
+                {
+                  "id": "17137c1",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"alc-principle-row\">\n                <div class=\"alc-principle-title-col\">\n                  <span class=\"alc-principle-num\">01</span>\n                  <h3>Sistemas antes que tácticas</h3>\n                </div>\n                <div class=\"alc-principle-desc-col\">\n                  <p>Una campaña aislada puede rendir temporalmente. Un sistema comercial permite entender qué funciona, repetirlo con precisión y escalarlo sobre bases sólidas.</p>\n                </div>\n              </div>\n              <div class=\"alc-principle-row\">\n                <div class=\"alc-principle-title-col\">\n                  <span class=\"alc-principle-num\">02</span>\n                  <h3>Evidencia antes que opinión</h3>\n                </div>\n                <div class=\"alc-principle-desc-col\">\n                  <p>Tomamos decisiones sobre comportamiento real de prospectos, salud del pipeline y ventas atribuibles; no sobre intuición o métricas de vanidad.</p>\n                </div>\n              </div>\n              <div class=\"alc-principle-row\">\n                <div class=\"alc-principle-title-col\">\n                  <span class=\"alc-principle-num\">03</span>\n                  <h3>Automatizar sin perder criterio humano</h3>\n                </div>\n                <div class=\"alc-principle-desc-col\">\n                  <p>La IA debe reducir fricciones operativas, acelerar la respuesta y mantener continuidad sin convertir la relación con el cliente en una conversación fría o mecánica.</p>\n                </div>\n              </div>",
+                    "_title": "HTML"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "e9a61bb",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "_css_classes": "alc-statement-card",
+                "background_background": "classic",
+                "background_color": "rgba(255, 255, 255, 0.5)",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(4, 1, 18, 0.04)",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32",
+                  "isLinked": true
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "48",
+                  "right": "48",
+                  "bottom": "48",
+                  "left": "48",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "24",
+                  "bottom": "32",
+                  "left": "24",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "1a3ba14",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"alc-statement-inner\">\n                <span class=\"alc-statement-tag\">Postura de diseño comercial</span>\n                <blockquote class=\"alc-statement-quote\">“Si una herramienta no mejora la velocidad de respuesta, el contexto o la trazabilidad de una venta, solo añade complejidad innecesaria.”</blockquote>\n                <div class=\"alc-statement-bridge\">\n                  <p>Diseñamos la infraestructura técnica para que tu equipo comercial dedique su tiempo a lo verdaderamente insustituible: negociar y cerrar.</p>\n                </div>\n              </div>",
+                    "_title": "HTML"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Alcancemos-2026-Elementor",
+  "type": "page"
+}
