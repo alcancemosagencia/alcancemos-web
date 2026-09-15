@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, TrendingUp } from "lucide-react";
@@ -31,14 +31,14 @@ export default function ResultadosPage() {
             <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-[#141416] px-3.5 py-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               <span className="text-[11px] font-semibold tracking-wider uppercase text-[#E4E4E7]">
-                Evidencia Verificada
+                Evidencia Comercial
               </span>
             </div>
             <h1 className="mt-4 text-[36px] sm:text-[48px] font-medium tracking-tight text-[#F4F4F6]">
               Resultados de Sistemas Comerciales
             </h1>
             <p className="mt-3 max-w-2xl text-[16px] text-[#9E9CA8] leading-relaxed">
-              Métricas reales y retornos verificados en adquisición de prospectos, automatización y conversión.
+              Datos comerciales reales en adquisición, automatización y conversión.
             </p>
           </div>
 

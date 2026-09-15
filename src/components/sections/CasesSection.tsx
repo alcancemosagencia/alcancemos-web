@@ -72,7 +72,7 @@ export function CasesSection() {
 
                   <div
                     className="flex shrink-0 text-emerald-400 pt-1"
-                    aria-label="Crecimiento comercial verificado"
+                    aria-label="Resultados comerciales"
                   >
                     <TrendingUp size={20} strokeWidth={2} />
                   </div>
