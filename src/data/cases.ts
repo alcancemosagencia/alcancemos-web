@@ -1,77 +1,75 @@
-﻿export type CaseStatus = "real" | "provisional" | "placeholder";
-
-export interface CaseMetric {
-  label: string;
+export interface ResultMetric {
   value: string;
-  isPrimary?: boolean;
+  label: string;
 }
 
-export interface CaseStudy {
+export interface ResultCase {
   id: string;
   company: string;
   industry: string;
-  status: CaseStatus;
-  authorized: boolean;
-  featured: boolean;
-  period: string;
   logo: string;
   logoWidth: number;
   logoHeight: number;
-  investment: string;
-  revenue: string;
-  roas: string;
-  contextSummary: string;
+  metrics: ResultMetric[];
+  phrase: string;
+  slug: string;
 }
 
-export const caseStudies: readonly CaseStudy[] = [
+export const resultCases: ResultCase[] = [
   {
     id: "casa-telas",
     company: "Casa & Telas",
-    industry: "Empresa Textil",
-    status: "real",
-    authorized: true,
-    featured: true,
-    period: "Mayo — julio de 2025",
-    logo: "/cases/casa-telas-dark.png",
-    logoWidth: 1536,
-    logoHeight: 1024,
-    investment: "$400.000 CLP",
-    revenue: "$10.540.000 CLP",
-    roas: "26.35x",
-    contextSummary: "Expansión comercial y captación de clientes de mayor volumen fuera de venta local.",
+    industry: "Textil",
+    logo: "/cases/casa-telas-logo.png",
+    logoWidth: 74,
+    logoHeight: 33,
+    metrics: [
+      {
+        value: "26.35x",
+        label: "ROAS",
+      },
+    ],
+    phrase: "De inversión a ventas.",
+    slug: "casa-y-telas",
   },
   {
-    id: "tecnocell",
-    company: "Tecnocell",
-    industry: "Retail Tecnología",
-    status: "placeholder",
-    authorized: false,
-    featured: false,
-    period: "2025",
-    logo: "/cases/tecnocell-placeholder.png",
-    logoWidth: 2172,
-    logoHeight: 724,
-    investment: "$1.200.000 CLP",
-    revenue: "$10.080.000 CLP",
-    roas: "8.4x",
-    contextSummary: "Placeholder interno para pruebas de maquetación.",
+    id: "golds-gym",
+    company: "GOLD'S GYM",
+    industry: "Fitness",
+    logo: "/cases/golds-gym-logo.png",
+    logoWidth: 66,
+    logoHeight: 45,
+    metrics: [
+      {
+        value: "150",
+        label: "Suscripciones",
+      },
+      {
+        value: "485",
+        label: "En lista de espera",
+      },
+    ],
+    phrase: "Preventa de apertura.",
+    slug: "golds-gym",
   },
   {
-    id: "constructora-andes",
-    company: "Constructora Andes",
-    industry: "Construcción",
-    status: "placeholder",
-    authorized: false,
-    featured: false,
-    period: "2025",
-    logo: "/cases/construccion-placeholder.png",
-    logoWidth: 2172,
-    logoHeight: 724,
-    investment: "$850.000 CLP",
-    revenue: "$6.800.000 CLP",
-    roas: "8.0x",
-    contextSummary: "Placeholder interno para pruebas de maquetación.",
+    id: "sevenpos",
+    company: "SevenPOS",
+    industry: "Tecnología",
+    logo: "/cases/sevenpos-logo.png",
+    logoWidth: 37,
+    logoHeight: 43,
+    metrics: [
+      {
+        value: "+100",
+        label: "Suscripciones primer día",
+      },
+      {
+        value: "50",
+        label: "Nuevas mensuales",
+      },
+    ],
+    phrase: "Software que impulsa negocios.",
+    slug: "sevenpos",
   },
 ];
-
-export const heroCase = caseStudies.find((c) => c.status === "real" && c.featured) ?? caseStudies[0];

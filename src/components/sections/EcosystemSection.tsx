@@ -10,42 +10,21 @@ const capabilities = [
     id: "acquisition",
     number: "01",
     title: "Adquisición cualificada",
-    subtitle: "Meta Ads & Tráfico de alta intención",
-    description:
-      "Diseñamos y ejecutamos campañas orientadas a captar compradores con presupuesto y necesidad real, filtrando curiosos desde el primer clic.",
-    metrics: [
-      { label: "Segmentación", value: "B2B & High-Ticket" },
-      { label: "Estructura", value: "Embudos de alta conversión" },
-      { label: "Optimización", value: "CPA y volumen predecible" },
-    ],
+    description: "Meta Ads orientado a demanda con intención real.",
     icon: Target,
   },
   {
     id: "ai-agents",
     number: "02",
     title: "IA + Conversación",
-    subtitle: "Agentes entrenados con tu conocimiento de ventas",
-    description:
-      "Atiende consultas iniciales, comprende el contexto comercial, perfila al prospecto y resuelve dudas frecuentes.",
-    metrics: [
-      { label: "Disponibilidad", value: "Atención continua" },
-      { label: "Interacción", value: "Conversación contextual" },
-      { label: "Capacidad", value: "Calificación y perfilamiento" },
-    ],
+    description: "Responde, califica y hace avanzar cada oportunidad.",
     icon: Bot,
   },
   {
     id: "crm-closing",
     number: "03",
     title: "Seguimiento en CRM",
-    subtitle: "Pipeline sincronizado y trazabilidad",
-    description:
-      "Cada oportunidad perfilada se registra en el CRM, agenda reunión en el calendario de tu equipo y activa secuencias de seguimiento.",
-    metrics: [
-      { label: "Integración", value: "HubSpot / Pipedrive / Sheets" },
-      { label: "Agendamiento", value: "Calendly / Cal.com directo" },
-      { label: "Trazabilidad", value: "Atribución real por venta" },
-    ],
+    description: "Centraliza oportunidades y mantiene el seguimiento activo.",
     icon: Database,
   },
 ];
@@ -88,7 +67,7 @@ export function EcosystemSection() {
 
           <Reveal delay={0.12}>
             <p className="mt-5 text-[clamp(1rem,1.2vw,1.15rem)] leading-[1.65] text-[#9E9CA8]">
-              Un sistema conecta adquisición, conversación y seguimiento para crear un flujo comercial predecible.
+              Un sistema conecta adquisición, conversación y seguimiento.
             </p>
           </Reveal>
         </div>
@@ -128,26 +107,10 @@ export function EcosystemSection() {
                 <h3 className="mt-5 text-[20px] sm:text-[22px] font-medium leading-[1.2] text-[#F4F4F6]">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-[13px] font-medium text-[#A1A1AA]">
-                  {item.subtitle}
-                </p>
 
-                <p className="mt-4 text-[14px] leading-[1.6] text-[#9E9CA8]">
+                <p className="mt-3 text-[14px] leading-[1.6] text-[#9E9CA8]">
                   {item.description}
                 </p>
-
-                {/* Metrics list */}
-                <div className="mt-6 space-y-2.5 border-t border-white/[0.06] pt-5">
-                  {item.metrics.map((m) => (
-                    <div
-                      key={m.label}
-                      className="flex items-center justify-between text-[12.5px]"
-                    >
-                      <span className="text-[#71717A]">{m.label}</span>
-                      <span className="font-medium text-[#E4E4E7]">{m.value}</span>
-                    </div>
-                  ))}
-                </div>
               </div>
             );
           })}
@@ -177,11 +140,8 @@ export function EcosystemSection() {
                 <span>PASO 01</span>
                 <span className="text-[#E4E4E7]">META ADS</span>
               </div>
-              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
-                Captación segmentada
-              </p>
-              <p className="mt-1 text-[12px] text-[#9E9CA8]">
-                Anuncios que derivan directamente al canal de atención.
+              <p className="mt-3 text-[15px] font-medium text-[#F4F4F6]">
+                Captación
               </p>
             </div>
 
@@ -190,24 +150,18 @@ export function EcosystemSection() {
                 <span>PASO 02</span>
                 <span className="text-[#FF0769]">AGENTE IA</span>
               </div>
-              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
-                Calificación y perfilamiento
-              </p>
-              <p className="mt-1 text-[12px] text-[#9E9CA8]">
-                Atención continua y filtro de prospectos con intención real.
+              <p className="mt-3 text-[15px] font-medium text-[#F4F4F6]">
+                Calificación
               </p>
             </div>
 
             <div className="rounded-2xl border border-white/[0.06] bg-[#1A1A1D]/80 p-5">
               <div className="flex items-center justify-between text-[11px] font-mono text-[#71717A]">
                 <span>PASO 03</span>
-                <span className="text-[#E4E4E7]">CRM SYNC</span>
+                <span className="text-[#E4E4E7]">CRM</span>
               </div>
-              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
-                Agendamiento automático
-              </p>
-              <p className="mt-1 text-[12px] text-[#9E9CA8]">
-                Reunión sincronizada en calendario del equipo comercial.
+              <p className="mt-3 text-[15px] font-medium text-[#F4F4F6]">
+                Seguimiento
               </p>
             </div>
 
@@ -216,11 +170,8 @@ export function EcosystemSection() {
                 <span>PASO 04</span>
                 <span className="text-emerald-400">REVENUE</span>
               </div>
-              <p className="mt-3 text-[14px] font-medium text-[#F4F4F6]">
-                Venta y atribución
-              </p>
-              <p className="mt-1 text-[12px] text-[#9E9CA8]">
-                Retorno sobre inversión medido por canal y cohorte.
+              <p className="mt-3 text-[15px] font-medium text-[#F4F4F6]">
+                Venta + medición
               </p>
             </div>
           </div>

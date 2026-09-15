@@ -2,14 +2,12 @@
 
 import { ArrowDown, ArrowUpRight, CheckCircle2, Cpu, Activity } from "lucide-react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { useLeadModal } from "@/context/LeadModalContext";
 
 export function HeroSection() {
-  const reduceMotion = useReducedMotion();
   const { openLeadModal } = useLeadModal();
 
   return (
@@ -76,13 +74,8 @@ export function HeroSection() {
         </div>
 
         {/* Product System Scene / Central Dashboard with 3D Robot */}
-        <div className="relative mx-auto mt-14 sm:mt-18 lg:mt-20 max-w-[1040px]">
-          <motion.div
-            initial={reduceMotion ? false : { opacity: 0, y: 30, scale: 0.98 }}
-            animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] border border-white/[0.08] bg-gradient-to-b from-[#18181B]/90 via-[#141416]/95 to-[#0F0F10] p-4 sm:p-8 lg:p-10 shadow-[0_24px_80px_rgba(0,0,0,0.8),0_0_0_1px_rgba(255,255,255,0.04)]"
-          >
+        <Reveal delay={0.28} className="relative mx-auto mt-12 sm:mt-16 lg:mt-18 max-w-[1040px]">
+          <div className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] border border-white/[0.08] bg-gradient-to-b from-[#18181B]/90 via-[#141416]/95 to-[#0F0F10] p-4 sm:p-8 lg:p-10 shadow-[0_24px_80px_rgba(0,0,0,0.8),0_0_0_1px_rgba(255,255,255,0.04)]">
             {/* Ambient inner glow */}
             <div
               aria-hidden="true"
@@ -106,17 +99,17 @@ export function HeroSection() {
             </div>
 
             {/* Central visual stage: Robot 3D + Floating Activity Nodes */}
-            <div className="relative mt-6 sm:mt-8 flex min-h-[360px] sm:min-h-[440px] lg:min-h-[500px] items-center justify-center">
+            <div className="relative mt-6 sm:mt-8 flex min-h-[340px] sm:min-h-[440px] lg:min-h-[500px] items-center justify-center overflow-hidden sm:overflow-visible">
               {/* Radial backdrop */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-[280px] w-[280px] sm:h-[380px] sm:w-[380px] rounded-full border border-white/[0.04] bg-radial from-white/[0.03] to-transparent" />
-                <div className="absolute h-[420px] w-[420px] sm:h-[520px] sm:w-[520px] rounded-full border border-dashed border-white/[0.03]" />
+                <div className="h-[260px] w-[260px] sm:h-[380px] sm:w-[380px] rounded-full border border-white/[0.04] bg-radial from-white/[0.03] to-transparent" />
+                <div className="absolute h-[380px] w-[380px] sm:h-[520px] sm:w-[520px] rounded-full border border-dashed border-white/[0.03]" />
               </div>
 
               {/* Robot Image with sleek bottom gradient mask */}
               <div className="relative z-10 flex w-full items-center justify-center">
                 <div
-                  className="w-[260px] sm:w-[360px] md:w-[420px] lg:w-[480px]"
+                  className="w-[240px] sm:w-[360px] md:w-[420px] lg:w-[480px]"
                   style={{
                     maskImage:
                       "linear-gradient(to bottom, black 0%, black 75%, rgba(0,0,0,0.4) 90%, transparent 100%)",
@@ -136,29 +129,23 @@ export function HeroSection() {
               </div>
 
               {/* Event Card 1 (Top-Left): Lead Calificado */}
-              <motion.div
-                initial={reduceMotion ? false : { opacity: 0, x: -20 }}
-                animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="absolute left-2 top-4 sm:left-6 sm:top-12 z-20 flex items-center gap-3 rounded-xl border border-white/[0.08] bg-[#1A1A1D]/90 px-3.5 py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
+              <div
+                className="absolute left-1 top-2 sm:left-6 sm:top-12 z-20 flex items-center gap-2.5 sm:gap-3 rounded-xl border border-white/[0.08] bg-[#1A1A1D]/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
               >
                 <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
                 <div className="text-left">
-                  <span className="block text-[10px] font-medium tracking-wide uppercase text-[#71717A]">
+                  <span className="block text-[9.5px] sm:text-[10px] font-medium tracking-wide uppercase text-[#71717A]">
                     Lead Calificado
                   </span>
-                  <p className="text-[13px] font-medium text-[#F4F4F6]">
+                  <p className="text-[12px] sm:text-[13px] font-medium text-[#F4F4F6]">
                     Distribuidora B2B
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Event Card 2 (Bottom-Left / Mid-Left): IA Calificación */}
-              <motion.div
-                initial={reduceMotion ? false : { opacity: 0, x: -20 }}
-                animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.65 }}
-                className="absolute left-2 bottom-12 sm:left-4 sm:bottom-20 z-20 flex items-center gap-3 rounded-xl border border-white/[0.08] bg-[#1A1A1D]/90 px-3.5 py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
+              <div
+                className="hidden sm:flex absolute left-4 bottom-20 z-20 items-center gap-3 rounded-xl border border-white/[0.08] bg-[#1A1A1D]/90 px-3.5 py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
               >
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#FF0769] shadow-[0_0_8px_rgba(255,7,105,0.7)]" />
                 <div className="text-left">
@@ -169,29 +156,26 @@ export function HeroSection() {
                     Oportunidad calificada
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Event Card 3 (Right): Reunión Agendada */}
-              <motion.div
-                initial={reduceMotion ? false : { opacity: 0, x: 20 }}
-                animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="absolute right-2 top-16 sm:right-6 sm:top-24 z-20 flex items-center gap-3 rounded-xl border border-white/[0.08] bg-[#1A1A1D]/90 px-3.5 py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
+              <div
+                className="absolute right-2 top-20 sm:right-6 sm:top-24 z-20 flex items-center gap-2.5 sm:gap-3 rounded-xl border border-white/[0.08] bg-[#1A1A1D]/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.5)] backdrop-blur-md"
               >
                 <span className="h-2 w-2 shrink-0 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
                 <div className="text-left">
-                  <span className="block text-[10px] font-medium tracking-wide uppercase text-[#71717A]">
+                  <span className="block text-[9.5px] sm:text-[10px] font-medium tracking-wide uppercase text-[#71717A]">
                     Reunión Agendada
                   </span>
-                  <p className="text-[13px] font-medium text-[#F4F4F6]">
+                  <p className="text-[12px] sm:text-[13px] font-medium text-[#F4F4F6]">
                     Martes · 10:30
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Bottom Proof Strip */}
-            <div className="mt-4 sm:mt-6 flex flex-wrap items-center justify-around gap-4 border-t border-white/[0.06] pt-5 text-[12.5px] text-[#A1A1AA]">
+            <div className="mt-4 sm:mt-6 flex flex-wrap items-center justify-around gap-4 border-t border-white/[0.06] pt-5 text-[12px] sm:text-[12.5px] text-[#A1A1AA]">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={14} className="text-emerald-400" />
                 <span>Meta Ads + Agentes IA + CRM</span>
@@ -204,11 +188,11 @@ export function HeroSection() {
               <div className="hidden h-3 w-px bg-white/[0.08] sm:block" />
               <div className="flex items-center gap-2">
                 <Activity size={14} className="text-[#E4E4E7]" />
-                <span className="text-[#E4E4E7]">Retorno 100% medible</span>
+                <span className="text-[#E4E4E7]">Retorno medible</span>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
