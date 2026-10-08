@@ -42,15 +42,21 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 font-medium tracking-[-0.01em] transition-all duration-200 ease-out active:translate-y-0 active:scale-[0.985] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
+    "group inline-flex items-center justify-center gap-2 font-medium tracking-[-0.01em] transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#111111] disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
     size === "large"
-      ? "min-h-[48px] px-6 py-2.5 text-[15px] rounded-[14px]"
-      : "min-h-[40px] px-4 py-2 text-[13.5px] rounded-[12px]",
+      ? "min-h-[48px] px-6 py-2.5 text-[15px] rounded-[12px]"
+      : "min-h-[44px] px-4 py-2 text-[13.5px] rounded-[12px]",
     variant === "primary"
-      ? "bg-white text-[#0F0F10] font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.3),0_6px_20px_rgba(255,255,255,0.06)] hover:-translate-y-0.5 hover:bg-neutral-100 hover:shadow-[0_8px_24px_rgba(255,255,255,0.1)] border border-white"
-      : "border border-white/[0.08] bg-[#161618] text-[#F4F4F6] shadow-[0_1px_2px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:bg-[#1E1E22] hover:border-white/[0.18]",
+      ? "bg-[#111111] text-white font-medium hover:bg-[#242427] border border-[#111111]"
+      : "border border-black/[0.12] bg-white text-[#111111] hover:bg-[#F8F8F9] hover:border-black/[0.2]",
     className
   );
+
+  const iconElement = icon ? (
+    <span>
+      {icon}
+    </span>
+  ) : null;
 
   if (href) {
     if (external) {
@@ -64,7 +70,7 @@ export function Button({
           {...props}
         >
           {children}
-          {icon}
+          {iconElement}
         </a>
       );
     }
@@ -77,7 +83,7 @@ export function Button({
         {...props}
       >
         {children}
-        {icon}
+        {iconElement}
       </Link>
     );
   }
@@ -91,7 +97,7 @@ export function Button({
       {...props}
     >
       {children}
-      {icon}
+      {iconElement}
     </button>
   );
 }

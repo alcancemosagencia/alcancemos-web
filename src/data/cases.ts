@@ -20,7 +20,7 @@ export const resultCases: ResultCase[] = [
     id: "casa-telas",
     company: "Casa & Telas",
     industry: "Textil",
-    logo: "/cases/casa-telas-logo.png",
+    logo: "/assets/v3/cases/casa-telas-logo.png",
     logoWidth: 74,
     logoHeight: 33,
     metrics: [
@@ -36,7 +36,7 @@ export const resultCases: ResultCase[] = [
     id: "golds-gym",
     company: "GOLD'S GYM",
     industry: "Fitness",
-    logo: "/cases/golds-gym-logo.png",
+    logo: "/assets/v3/cases/golds-gym-logo.png",
     logoWidth: 66,
     logoHeight: 45,
     metrics: [
@@ -56,7 +56,7 @@ export const resultCases: ResultCase[] = [
     id: "sevenpos",
     company: "SevenPOS",
     industry: "Tecnología",
-    logo: "/cases/sevenpos-logo.png",
+    logo: "/assets/v3/cases/sevenpos-logo.png",
     logoWidth: 37,
     logoHeight: 43,
     metrics: [

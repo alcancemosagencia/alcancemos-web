@@ -1,5 +1,6 @@
 export const navigationItems = [
-  { label: "Ecosistema", href: "#sistema" },
+  { label: "Sistema", href: "#sistema" },
   { label: "Resultados", href: "#casos" },
-  { label: "Implementación", href: "#implementacion" },
+  { label: "Proceso", href: "#implementacion" },
+  { label: "FAQ", href: "#faq" },
 ] as const;

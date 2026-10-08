@@ -21,9 +21,11 @@ const config: Config = {
         muted: "var(--muted)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
-        display: ["var(--font-bricolage)", "Bricolage Grotesque", "sans-serif"],
-        heading: ["var(--font-bricolage)", "Bricolage Grotesque", "sans-serif"],
+        sans: ["var(--font-geist)", "Geist", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        display: ["var(--font-geist)", "Geist", "sans-serif"],
+        heading: ["var(--font-geist)", "Geist", "sans-serif"],
+        mono: ["var(--font-geist)", "Geist", "sans-serif"],
+        editorial: ["var(--font-playfair)", "serif"],
       },
       maxWidth: {
         container: "var(--container-width)",

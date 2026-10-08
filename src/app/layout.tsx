@@ -1,17 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import "./fidelity.css";
 import { ClientProviders } from "@/components/providers/ClientProviders";
+import { organizationSchema, websiteSchema, faqPageSchema } from "@/data/schema";
 
-const bricolage = Bricolage_Grotesque({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-bricolage",
+  variable: "--font-geist",
   display: "swap",
 });
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-inter",
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -19,10 +22,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://alcancemos.com"),
   alternates: { canonical: "/" },
   title: "Alcancemos | Sistemas Comerciales, Automatización e IA",
-  description: "Diseñamos e instalamos el sistema comercial que conecta adquisición cualificada, agentes de IA conversacionales y sincronización con CRM para escalar conversiones.",
+  description:
+    "Diseñamos e implementamos sistemas comerciales que conectan adquisición, automatización, inteligencia artificial y CRM para convertir más oportunidades en ventas.",
   openGraph: {
     title: "Alcancemos | Sistemas Comerciales, Automatización e IA",
-    description: "Diseñamos e instalamos el sistema comercial que conecta adquisición cualificada, agentes de IA conversacionales y sincronización con CRM para escalar conversiones.",
+    description:
+      "Diseñamos e implementamos sistemas comerciales que conectan adquisición, automatización, inteligencia artificial y CRM para convertir más oportunidades en ventas.",
     url: "https://alcancemos.com",
     siteName: "Alcancemos",
     locale: "es_CL",
@@ -31,25 +36,54 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Alcancemos | Sistemas Comerciales, Automatización e IA",
-    description: "Diseñamos e instalamos el sistema comercial que conecta adquisición cualificada, agentes de IA conversacionales y sincronización con CRM para escalar conversiones.",
+    description:
+      "Diseñamos e implementamos sistemas comerciales que conectan adquisición, automatización, inteligencia artificial y CRM para convertir más oportunidades en ventas.",
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
-    icon: [{ url: "/brand/alcancemos-favicon.png", type: "image/png", sizes: "500x500" }],
-    shortcut: "/brand/alcancemos-favicon.png",
-    apple: [{ url: "/brand/alcancemos-favicon.png", sizes: "500x500", type: "image/png" }],
+    icon: [{ url: "/assets/v3/branding/alcancemos-favicon.png", type: "image/png", sizes: "500x500" }],
+    shortcut: "/assets/v3/branding/alcancemos-favicon.png",
+    apple: [{ url: "/assets/v3/branding/alcancemos-favicon.png", sizes: "500x500", type: "image/png" }],
   },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#0F0F10" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#FFFFFF" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${bricolage.variable} ${inter.variable}`}>
-      <body className="bg-background text-foreground font-sans antialiased selection:bg-white/20 selection:text-white">
-        <ClientProviders>
-          {children}
-        </ClientProviders>
+    <html lang="es" className={`${geist.variable} ${playfair.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqPageSchema),
+          }}
+        />
+      </head>
+      <body className="bg-background text-foreground font-sans antialiased selection:bg-[#FF0769]/10 selection:text-[#FF0769]">
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );

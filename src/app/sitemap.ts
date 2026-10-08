@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: "https://alcancemos.com/resultados",
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://alcancemos.com/privacidad",
       lastModified: now,
       changeFrequency: "yearly",
