@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { LeadCta } from "@/components/ui/LeadCta";
+import { WordBlurReveal } from "@/components/ui/WordBlurReveal";
 
 export function HeroSection() {
   return (
     <section id="inicio" className="v3-hero">
       <div className="v3-hero-copy">
-        <h1>Construimos sistemas<br />comerciales para convertir<br /><em>oportunidades en ventas</em></h1>
+        <WordBlurReveal><h1>Construimos sistemas<br />comerciales para convertir<br /><em>oportunidades en ventas</em></h1></WordBlurReveal>
         <p>Conectamos adquisición, conversación, IA, automatización y<br />seguimiento comercial en un sistema diseñado para crecer</p>
         <div className="v3-hero-actions">
           <LeadCta source="hero_cta" label="Agendar evaluación" direction="right" />

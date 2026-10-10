@@ -2,7 +2,7 @@
 html { scroll-behavior: auto; }
 body { background: #e7e7e7; }
 .font-mono { font-family: var(--font-geist), sans-serif; }
-.v3-home { --v3-bg: #e7e7e7; --v3-panel: #f8f9fa; --v3-muted: #686868; background: var(--v3-bg); color: #050505; }
+.v3-home { --v3-bg: #e7e7e7; --v3-panel: #f8f9fa; --v3-muted: #686868; display: flow-root; background: var(--v3-bg); color: #050505; }
 .v3-home *, .v3-header *, .v3-footer * { animation: none !important; transition: none !important; }
 .v3-home h1, .v3-home h2, .v3-home h3, .v3-home p, .v3-home figure { margin: 0; }
 .v3-home h1, .v3-home h2, .v3-home h3 { color: inherit; }
@@ -277,4 +277,44 @@ body { background: #e7e7e7; }
   .v3-faq-contact button, .v3-faq-list p { font-size: 13px; line-height: 1.5; }
   .v3-faq-list button { font-size: 14px; line-height: 1.45; }
   .v3-final-cta > p { font-size: 14px; line-height: 1.5; }
+}
+
+/* ALC-V3-02C: permanent inset borders, independent of pointer interaction. */
+.v3-capability { position: relative; --v3-card-edge: rgba(0, 0, 0, 0.10); }
+.v3-stage:not(.v3-stage-diagnostic) { --v3-card-edge: rgba(255, 255, 255, 0.14); }
+.v3-capability::after, .v3-stage:not(.v3-stage-diagnostic)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--v3-card-edge);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* ALC-V3-03C: square cards within the existing mobile layout. */
+@media (max-width: 900px) {
+  .v3-capability, .v3-capability:nth-child(n+4),
+  .v3-stage, .v3-stage:nth-child(-n+2) {
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 0;
+  }
+  .v3-capability { display: flex; flex-direction: column; justify-content: space-between; }
+  .v3-capability figure { height: auto; min-height: 0; flex: 1; max-height: 60%; }
+  .v3-capability > div { flex: none; }
+  .v3-stage { justify-content: space-between; }
+  .v3-stage img { width: min(144px, 40%); flex: none; }
+  .v3-stage > div { flex: none; }
+}
+
+/* ALC-V3-03D: share spare space below the copy; preserve tablet geometry. */
+@media (max-width: 900px) and (width < 768px) {
+  .v3-stage, .v3-stage:nth-child(-n+2) {
+    display: grid;
+    grid-template-rows: auto minmax(20px, 4fr) auto minmax(0, 1fr);
+    gap: 0;
+  }
+  .v3-stage img { grid-row: 1; }
+  .v3-stage > div { grid-row: 3; }
 }
