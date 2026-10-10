@@ -8,10 +8,12 @@ import { CapabilitiesSection } from "@/components/sections/CapabilitiesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
+import { LandingMotion } from "@/components/ui/LandingMotion";
 
 export default function Home() {
   return (
     <div className="v3-home">
+      <LandingMotion />
       <Header />
       <main>
         <HeroSection />
